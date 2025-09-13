@@ -1,0 +1,149 @@
+   .dropdown-toggle::after {
+            display: none;
+        }
+        /* Increase Home, About Us, Contact Us font size */
+        .navbar-nav .nav-link {
+            font-size: 25px;
+            color: white;
+        }
+
+    /* Show dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Remove extra margin if needed */
+}
+
+
+body{
+    padding-top: 100px;
+}
+
+/* Default desktop carousel height */
+#carouselExampleCaptions {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+#carouselExampleCaptions img {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+#shopping{
+    text-align: center;
+    font-family: cursive;
+    color: rgb(220, 81, 104);
+    text-shadow: 2px 8px 10px pink;
+}
+
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+
+#title {
+    padding-top: 50px;
+    text-align: center;
+    font-family: cursive;
+    color: rgb(220, 81, 104);
+    text-shadow: 2px 8px 10px pink;
+}
+
+
+/* For smaller screens (mobile) */
+@media (max-width: 768px) {
+    #carouselExampleCaptions img {
+        height: 400px; /* Smaller height for mobile */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    img {
+          max-height: 180px;
+        margin-right: 90px auto; /* Centers the image horizontally */
+        display: block;
+    }
+}
+
+/* Show dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Remove extra margin if needed */
+}
+
+
+.see {
+    font-size: 20px;
+    width: 170px;
+    font-family: cursive;
+    color: white;
+    background-color: rgb(220, 81, 104);
+    /* text-shadow: 2px 8px 10px pink; */
+    border: none;
+    /* Remove default border */
+    padding: 12px 30px;
+    /* Space inside button */
+
+    border-radius: 50px;
+    /* Rounded capsule shape */
+    cursor: pointer;
+    /* Pointer cursor */
+    /* font-weight: bold; */
+    transition: transform 0.3s ease;
+
+}
+
+.see:hover{
+ transform: scale(1.1);
+ 
+}
+
+.wishlist-btn {
+  width: 30px;       /* Smaller circle */
+  height: 30px;
+  background: white;
+  border: none;
+  border-radius: 50%; /* Perfect circle */
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  color: red;
+  font-size: 14px;   /* Smaller icon inside */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; /* Align with price text */
+  margin-left: 8px;  /* Space from price */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background: red;
+  color: white;
+}
+
+#to:hover{
+    transform: scale(1.1);
+    
+}
+
+.to img {
+  transition: transform 0.3s ease;
+}
+
+.to:hover img {
+  transform: scale(1.3); /* zoom effect */
+}
+
+
+
+.dropdown-toggle::after {
+            display: none;
+        }
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+

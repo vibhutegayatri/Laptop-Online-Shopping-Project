@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laptop Space</title>
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" hr
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./js/bootstrap.min.js"></script>
+ <style>
+   
+
+    .hidden {
+      display: none;
+    }
+
+    #paymentSection {
+      margin-top: -100px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .order-summary {
+      background: #fff;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .payment-options button {
+      width: 200px;
+      background: #28a745;
+      margin: 8px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+    }
+
+    .online-options button {
+      display: block;
+      width: 250px;
+      margin: 10px auto;
+      background: #ff5722;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+    }
+
+    .checkout-screen,
+    .pin-screen,
+    .success-screen {
+      display: none;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 350px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .success {
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    form input {
+      width: 50%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+
+  
+    
+</head>
+
+<body>
+    <section id="navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black py-4 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./images/laptop.png" height="50" alt="Logo"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactus">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Brand
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./apple.html">Apple</a></li>
+                            <li><a class="dropdown-item" href="./asus.html">Asus</a></li>
+                            <li><a class="dropdown-item" href="./dell.html">Dell</a></li>
+                            <li><a class="dropdown-item" href="./hp.html">HP</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center flex-wrap">
+                    <a href="./addtocart.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+                        <i class="fa-solid fa-cart-shopping navbar-icon text-white"></i>
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
+
+                    <a href="wishlist.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+                        <i class="bi bi-heart-fill navbar-icon text-white"></i>
+                        <span id="wishlist-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
+
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 40px;">
+                            <i class="bi bi-person-fill navbar-icon text-white"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                            <li><a class="dropdown-item" href="./reg.html">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form class="d-flex mt-2 mt-lg-0 ms-lg-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" style="height: 35px; margin-top: 10px;">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    </section>
+    <script>
+      function logout(){
+        window.location.href="https://www.google.com/"
+      }
+    </script>
+
+    <!-- banner -->
+     <section >
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/banner.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="color: black;">"Shop Laptop Anytime, Anywhere."</h1>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/banner2.png" class="d-block w-100 " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="color: black;">"Developers Partner"</h1>
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/banner1.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+     </section>
+
+     <!-- images -->
+  <div class="py-4" id="shopping">
+    <h1 id="shopping" class="text-center">Shopping Here</h1>
+    <p id="caption" class="text-center">“Unbox happiness with every purchase.”</p>
+  </div>
+
+  <!-- Main Product Section -->
+
+  <section class="container" style="font-size: 18px;" id="productSection">
+
+    <!-- 1st row -->
+    <div class="row product-row justify-content-center">
+      <div class="col-md-2 text-center">
+
+        <img src="./images/Apple/A1.jpg" class="img-fluid rounded-start" alt="..." height="200px">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">APPLE Laptop</h5>
+          <p><b>MacBook Pro Model <br> Apple's M-sereies Chip<br>(like M2 Pro, M2 MAX)</b></p>
+          <p>
+            90,000/-Rs
+            <button class="wishlist-btn add-to-wish"
+              data-name="MacBook Pro Model Apples M-sereies Chip (like M2 Pro, M2 MAX)" data-price="90,000/-"
+              data-image="./images/Apple/A1.jpg">
+              <i class="bi bi-heart"></i>
+            </button>
+          </p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('MacBook Pro Model Apples M-sereies Chip (like M2 Pro, M2 MAX)','90,000/-Rs')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>MacBook Pro Model <br> Apple's M-sereies Chip<br>(like M2 Pro, M2 MAX)</b>" data-price="90000"
+            data-images="./images/Apple/A1.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <img src="./images/asus/1.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">ASUS Laptop</h5>
+          <p><b>Asus VivoBook 15 Core i3 11th <br>11th Gen 8GB Ram<br>512GB SSD 15.6 FHD Laptop</b></p>
+          <p>70,000/-Rs
+            <button class="wishlist-btn add-to-wish"
+              data-name="Asus VivoBook 15 Core i3 11th 11th Gen 8GB Ram 512GB SSD 15.6 FHD Laptop" data-price="70,000/-"
+              data-image="./images/asus/1.jpg">
+              <i class="bi bi-heart"></i>
+            </button>
+          </p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('Asus VivoBook 15 Core i3 11th 11th Gen 8GB Ram 512GB SSD 15.6 FHD Laptop','70,000/-Rs')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>Asus VivoBook 15 Core i3 11th <br>11th Gen 8GB Ram<br>512GB SSD 15.6 FHD Laptop</b>"
+            data-price="70000" data-images="./images/asus/1.jpg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- 2nd row -->
+    <div class="row product-row justify-content-center">
+      <div class="col-md-2 text-center">
+        <img src="./images/dell/1.jpg" class="img-fluid rounded-start" alt="..." height="200px">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">DELL Laptop</h5>
+          <p><b>Dell 16 Series, intel Acr 140V<br>NVIDIA GeForce RTX 5070<br>12GB RAM | 500GB SSD</b></p>
+          <p>75,000/-Rs
+            <button class="wishlist-btn add-to-wish"
+              data-name="Dell 16 Series, intel Acr 140V<br>NVIDIA GeForce RTX 5070<br>12GB RAM | 500GB SSD"
+              data-price="75,000/-" data-image="./images/dell/1.jpg">
+              <i class="bi bi-heart"></i>
+            </button>
+          </p>
+          <button class="btn btn-primary" id="to" onclick="buyNow('',',000/-Rs')">Shop Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>Dell 16 Series, intel Acr 140V<br>NVIDIA GeForce RTX 5070<br>12GB RAM | 500GB SSD</b>"
+            data-price="75000" data-images="./images/dell/1.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <img src="./images/hp/1.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">HP Laptop</h5>
+          <p><b>HP 14 Chromebook intel N4120<br>16GB RAM | 192GB SSD storage <br>HD Thin and Light Laptop</b></p>
+          <p>80,000/-Rs
+            <button class="wishlist-btn add-to-wish"
+              data-name="HP 14 Chromebook intel N4120 16GB RAM | 192GB SSD storage HD Thin and Light Laptop"
+              data-price="80,000/-" data-image="./images/hp/1.jpg">
+              <i class="bi bi-heart"></i>
+            </button>
+          </p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('HP 14 Chromebook intel N4120 16GB RAM | 192GB SSD storage HD Thin and Light Laptop','80,000/-Rs')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>HP 14 Chromebook intel N4120<br>16GB RAM | 192GB SSD storage <br>HD Thin and Light Laptop</b>"
+            data-price="80000" data-images="./images/hp/1.jpg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <!-- 3rd row -->
+    <div class="row product-row justify-content-center">
+      <div class="col-md-2 text-center">
+        <img src="./images/Apple/A2.jpg" class="img-fluid rounded-start" alt="..." height="200px">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">APPLE Laptop</h5>
+          <p><b>Recent Model like those<br>with the M4 chip feature<br>a 10-core, 10-core GPU</b></p>
+          <p>85,000/-Rs
+            <button class="wishlist-btn add-to-wish"
+              data-name="Recent Model like those with the M4 chip feature a 10-core, 10-core GPU" data-price="85,000/-"
+              data-image="./images/Apple/A2.jpg">
+              <i class="bi bi-heart"></i>
+            </button>
+          </p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('Recent Model like those with the M4 chip feature a 10-core, 10-core GPU','85,000/-Rs')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>Recent Model like those<br>with the M4 chip feature<br>a 10-core, 10-core GPU</b>"
+            data-price="85000" data-images="./images/Apple/A2.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <img src="./images/asus/2.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">ASUS Laptop</h5>
+          <p><b>Asus ROG Zephyrus Duo 15<br> Intel Core i9-10980HK<br>8GB Graphics & Gaming Laptop</b></p>
+          <p>65,000/-Rs
+            <button class="wishlist-btn add-to-wish"
+              data-name="Asus ROG Zephyrus Duo 15 Intel Core i9-10980HK 8GB Graphics & Gaming Laptop"
+              data-price="65,000/-" data-image="./images/asus/2.jpg">
+              <i class="bi bi-heart"></i>
+            </button>
+          </p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('Asus ROG Zephyrus Duo 15 Intel Core i9-10980HK 8GB Graphics & Gaming Laptop','65,000/-Rs')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>Asus ROG Zephyrus Duo 15<br> Intel Core i9-10980HK<br>8GB Graphics & Gaming Laptop</b>"
+            data-price="65000" data-images="./images/asus/2.jpg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 4th row -->
+
+
+
+  <!--  See More Section -->
+
+  <div style="margin-left: 10px;">
+
+    <section class="container" id="seeMoreSection1">
+      <div class="text-center" style="margin-top: 30px; margin-right: 200px;">
+        <button onclick="showPhotos()" id="see-more" class="see" style="margin-left: 130px;">See More</button>
+      </div>
+
+      <div id="photos-section" style="display:none;">
+        <!-- Extra Products -->
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/Apple/A3.jpg" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">APPLE Laptop</h5>
+              <p><b>Mac models, including the<br>iMac, Mac mini,<br> MacBook Air</b></p>
+              <p>70,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Mac models, including the iMac, Mac mini, MacBook Air" data-price="70,000/-"
+                  data-image="./images/Apple/A3.jpg">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Mac models, including the iMac, Mac mini, MacBook Air','70,000/-Rs')">Shop Now</button>
+              <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Mac models, including the<br>iMac, Mac mini,<br> MacBook Air</b>" data-price="70000"
+                data-images="./images/Apple/A3.jpg">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/asus/3.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">ASUS Laptop</h5>
+              <p><b>Asus ProARt Studio Book Pro<br>15 intel 15.6 inches <br>48GB DDR4 Windows 10 Pro</b></p>
+              <p>68,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Asus ProARt Studio Book Pro 15 intel 15.6 inches 48GB DDR4 Windows 10 Pro"
+                  data-price="68,000/-" data-image="./images/asus/3.jpg">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Asus ProARt Studio Book Pro 15 intel 15.6 inches 48GB DDR4 Windows 10 Pro','68,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Asus ProARt Studio Book Pro<br>15 intel 15.6 inches <br>48GB DDR4 Windows 10 Pro</b>"
+                data-price="68000" data-images="./images/asus/3.jpg">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+<br>
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/Apple/14.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">APPLE Laptop</h5>
+              <p><b>2020 MacBook Air with M1 chip<br>8-core CPU, 7-core GPU<br>13.3 inch Retain Display </b></p>
+              <p>85,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="2020 MacBook Air with M1 chip 8-core CPU, 7-core GPU 13.3 inch Retain Display"
+                  data-price="85,000/-" data-image="./images/Apple/14.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('2020 MacBook Air with M1 chip 8-core CPU, 7-core GPU 13.3 inch Retain Display','85,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>2020 MacBook Air with M1 chip<br>8-core CPU, 7-core GPU<br>13.3 inch Retain Display </b>"
+                data-price="85000" data-images="./images/Apple/14.png">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/hp/10.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">HP Laptop</h5>
+              <p><b>HP Envy X360 11th Gen<br>Intel Core i7 13.3 inches Fhd<br>16GB RAM | 512GB SSD</b></p>
+              <p>76,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="HP Envy X360 11th Gen Intel Core i7 13.3 inches Fhd 16GB RAM | 512GB SSD"
+                  data-price="76,000/-" data-image="./images/hp/10.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('HP Envy X360 11th Gen Intel Core i7 13.3 inches Fhd 16GB RAM | 512GB SSD','76,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>HP Envy X360 11th Gen<br>Intel Core i7 13.3 inches Fhd<br>16GB RAM | 512GB SSD</b>"
+                data-price="76000" data-images="./images/hp/10.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+<br>
+
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/dell/10.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">DELL Laptop</h5>
+              <p><b>Dell Inspiron 1545<br> intel core 2, stereo 24 bit mini<br>3GB RAM | 250GB SDD</b></p>
+              <p>67,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Dell Inspiron 1545 intel core 2, stereo 24 bit mini 3GB RAM | 250GB SDD"
+                  data-price="67,000/-" data-image="./images/dell/10.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Dell Inspiron 1545 intel core 2, stereo 24 bit mini 3GB RAM | 250GB SDD','67,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Dell Inspiron 1545<br> intel core 2, stereo 24 bit mini<br>3GB RAM | 250GB SDD</b>"
+                data-price="67000" data-images="./images/dell/10.png">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/hp/8.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">HP Laptop</h5>
+              <p><b>HP Envy X360 , AMD Ryzen 5<br>8GB RAM | 512GB SSD<br>Touchscrren,15.6 inch, FHC Laptop </b></p>
+              <p>55,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="HP Envy X360 , AMD Ryzen 5 8GB RAM | 512GB SSD Touchscrren,15.6 inch, FHC Laptop"
+                  data-price="55,000/-" data-image="./images/hp/8.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('HP Envy X360 , AMD Ryzen 5 8GB RAM | 512GB SSD Touchscrren,15.6 inch, FHC Laptop','55,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>HP Envy X360 , AMD Ryzen 5<br>8GB RAM | 512GB SSD<br>Touchscrren,15.6 inch, FHC Laptop </b>"
+                data-price="55000" data-images="./images/hp/8.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+<br>
+
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/Apple/11.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">APPLE Laptop</h5>
+              <p><b>Apple 2021 MacBook Pro <br>Apple M1 Pro-MKGQ3HN/A<br>14.2 inch, space grey</b></p>
+              <p>90,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple 2021 MacBook Pro Apple M1 Pro-MKGQ3HN/A 14.2 inch, space grey" data-price="90,000/-"
+                  data-image="./images/Apple/11.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Apple 2021 MacBook Pro Apple M1 Pro-MKGQ3HN/A 14.2 inch, space grey','90,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Apple 2021 MacBook Pro <br>Apple M1 Pro-MKGQ3HN/A<br>14.2 inch, space grey</b>"
+                data-price="90000" data-images="./images/Apple/11.png">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/asus/11.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">ASUS Laptop</h5>
+              <p><b>Asus UL20 Serires laptop<br>intel core i3 processor<br>Thin and light 12-inch laptop</b></p>
+              <p>71,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Asus UL20 Serires laptop intel core i3 processor Thin and light  12-inch laptop"
+                  data-price="71,000/-" data-image="./images/asus/11.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Asus UL20 Serires laptop intel core i3 processor Thin and light 12-inch laptop','71,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Asus UL20 Serires laptop<br>intel core i3 processor<br>Thin and light 12-inch laptop</b>"
+                data-price="71000" data-images="./images/asus/11.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+<br>
+
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/hp/18.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">HP Laptop</h5>
+              <p><b>HP Envy X360 13th Gen<br>Intel Core i5-1335U | 16GB DDRSS<br>512GB SSD | 5MP IR camera</b></p>
+              <p>55,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="HP Envy X360 13th Gen Intel Core i5-1335U | 16GB DDRSS | 512GB SSD | 5MP IR camera"
+                  data-price="55,000/-" data-image="./images/hp/8.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('HP Envy X360 13th Gen Intel Core i5-1335U | 16GB DDRSS | 512GB SSD | 5MP IR camera','55,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>HP Envy X360 13th Gen<br>Intel Core i5-1335U | 16GB DDRSS<br>512GB SSD | 5MP IR camera</b>"
+                data-price="55000" data-images="8">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/dell/12.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">DELL Laptop</h5>
+              <p><b>Dell Latitude 9330 2 in 1<br>intel core i7| 13.3 QHD<br>32GB RAM | 1TB SDD</b></p>
+              <p>75,000/-Rs</p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Dell Latitude 9330 2 in 1 intel core i7| 13.3 QHD| 32GB RAM | 1TB SDD','75,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Dell Latitude 9330 2 in 1<br>intel core i7| 13.3 QHD<br>32GB RAM | 1TB SDD</b>"
+                data-price="75000" data-images="./images/dell/12.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+<br>
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/Apple/12.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">APPLE Laptop</h5>
+              <p><b>Apple MacBook Pro M1 Max<br>Face time HD camera delivers <br> extraordinary performance </b></p>
+              <p>85,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple MacBook Pro M1 Max Face time HD camera delivers extraordinary performance"
+                  data-price="85,000/-" data-image="./images/Apple/12.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Apple MacBook Pro M1 Max Face time HD camera delivers extraordinary performance','85,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Apple MacBook Pro M1 Max<br>Face time HD camera delivers <br> extraordinary performance </b>"
+                data-price="85000" data-images="./images/Apple/12.png">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/asus/12.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">ASUS Laptop</h5>
+              <p><b>Asus GM501GM-WS74 ROG<br>Intel core i7 Processore<br>16GB DDR4 | Hard Drive 256GB</b></p>
+              <p>64,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Asus GM501GM-WS74 ROG Intel core i7 Processore 16GB DDR4 | Hard Drive 256GB"
+                  data-price="64,000/-" data-image="./images/asus/12.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Asus GM501GM-WS74 ROG Intel core i7 Processore 16GB DDR4 | Hard Drive 256GB','64,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Asus GM501GM-WS74 ROG<br>Intel core i7 Processore<br>16GB DDR4 | Hard Drive 256GB</b>"
+                data-price="64000" data-images="./images/asus/12.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+<br>
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/hp/13.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">HP Laptop</h5>
+              <p><b>HP Evny Cor i5 8th Gen<br>8GB RAM | 128GB SSD | 13.3 inch FHD <br>Intel Trubo Boost Technology</b>
+              </p>
+              <p>57,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="HP Evny Cor i5 8th Gen 8GB RAM | 128GB SSD | 13.3 inch FHD Intel Trubo Boost Technology"
+                  data-price="57,000/-" data-image="./images/hp/13.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('HP Evny Cor i5 8th Gen 8GB RAM | 128GB SSD | 13.3 inch FHD | Intel Trubo Boost Technology','57,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>HP Evny Cor i5 8th Gen<br>8GB RAM | 128GB SSD | 13.3 inch FHD <br>Intel Trubo Boost Technology</b>"
+                data-price="57000" data-images="./images/hp/13.png">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/asus/13.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">ASUS Laptop</h5>
+              <p><b>Asus ROG Zephyrus Duo <br>SE 15 Gaming Laptop 32GB RAM<br>5th Gen AMD Ryzen 9 processor</b></p>
+              <p>67,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Asus ROG Zephyrus Duo SE 15 Gaming Laptop 32GB RAM 5th Gen AMD Ryzen 9 processor"
+                  data-price="67,000/-" data-image="./images/asus/13.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('Asus ROG Zephyrus Duo SE 15 Gaming Laptop 32GB RAM 5th Gen AMD Ryzen 9 processor','67,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>Asus ROG Zephyrus Duo <br>SE 15 Gaming Laptop 32GB RAM<br>5th Gen AMD Ryzen 9 processor</b>"
+                data-price="67000" data-images="./images/asus/13.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+<br>
+
+        <div class="row product-row justify-content-center">
+          <div class="col-md-2 text-center">
+            <img src="./images/Apple/14.png" class="img-fluid rounded-start" alt="..." height="200px">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">APPLE Laptop</h5>
+              <p><b>2020 MacBook Air with M1 chip<br>8-core CPU, 7-core GPU<br>13.3 inch Retain Display </b></p>
+              <p>85,000/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="2020 MacBook Air with M1 chip 8-core CPU, 7-core GPU 13.3 inch Retain Display"
+                  data-price="85,000/-" data-image="./images/Apple/14.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('2020 MacBook Air with M1 chip 8-core CPU, 7-core GPU 13.3 inch Retain Display','85,000/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>2020 MacBook Air with M1 chip<br>8-core CPU, 7-core GPU<br>13.3 inch Retain Display </b>"
+                data-price="85000" data-images="./images/Apple/14.png">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <img src="./images/hp/15.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">HP Laptop</h5>
+              <p><b>HP Envy X36014 2 in 1 laptop<br>Intel Cor Ultra 7-155U<br>16GB RAM | 512GB SSD | Intel Arc</b></p>
+              <p>66,500/-Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="HP Envy X36014 2 in 1 laptop Intel Cor Ultra 7-155U 16GB RAM | 512GB SSD | Intel Arc"
+                  data-price="66,500/-" data-image="./images/hp/15.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </p>
+              <button class="btn btn-primary" id="to"
+                onclick="buyNow('HP Envy X36014 2 in 1 laptop Intel Cor Ultra 7-155U 16GB RAM | 512GB SSD | Intel Arc','66,500/-Rs')">Shop
+                Now</button> <button class="btn btn-primary add-to-cart" id="to"
+                data-name="<b>HP Envy X36014 2 in 1 laptop<br>Intel Cor Ultra 7-155U<br>16GB RAM | 512GB SSD | Intel Arc</b>"
+                data-price="66500" data-images="./images/hp/15.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 30px; margin-right: 200px;">
+          <button class="see" onclick="hidePhotos()" style="margin-left: 130px;">See Less</button>
+        </div>
+      </div>
+    </section>
+
+
+
+     <!-- PAYMENT SECTION -->
+    <section id="paymentSection" class="hidden">
+      <h3>Order Now!</h3>
+      <div class="order-summary">
+        <p><b>Product:</b> <span id="pName"></span></p>
+        <p><b>Price:</b> <span id="pPrice"></span></p>
+      </div>
+      <h2>Select Payment Option</h2>
+      <div class="payment-options">
+        <button onclick="toggleCODForm()">Cash on Delivery</button>
+        <button onclick="showOnline()">Cash on Online</button>
+      </div>
+      <!-- COD Form -->
+      <form id="codForm" onsubmit="submitCOD(event)" class="hidden">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Address" required>
+        <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}">
+        <input type="text" placeholder="State" required>
+        <input type="text" placeholder="City" required>
+        <input type="number" placeholder="Pin Code" required><br>
+        <button class="btn btn-primary" type="submit">Place Order</button>
+      </form>
+      <!-- Online Payment -->
+      <div id="onlinePayment" class="hidden">
+        <h3>Choose Online Payment Method</h3>
+        <div class="online-options">
+          <button onclick="openCheckout('PhonePe')">PhonePe</button>
+          <button onclick="openCheckout('Google Pay')">Google Pay</button>
+          <button onclick="openCheckout('Paytm')">Paytm</button>
+          <button onclick="openCheckout('PayPal')">PayPal</button>
+        </div>
+      </div>
+      <!-- Checkout + PIN + Success -->
+      <div id="checkoutScreen" class="checkout-screen">
+        <h3 id="checkoutTitle">Checkout</h3>
+        <p>Amount: <b><span id="checkoutAmount">₹0</span></b></p>
+        <button class="btn btn-primary" onclick="goToPinScreen()">Pay</button>
+      </div>
+      <div id="pinScreen" class="pin-screen">
+        <h3 id="pinTitle">Enter PIN</h3>
+        <input type="password" id="upiPin" placeholder="****" maxlength="6" required>
+        <button class="btn btn-primary" onclick="completePayment()">Submit</button>
+      </div>
+      <div id="successScreen" class="success-screen">
+        <p class="success">✅ Payment Successful!</p>
+        <p>Your order has been placed.</p>
+        <button class="btn btn-primary" onclick="backToProducts()">Back to Products</button>
+      </div>
+    </section>
+
+
+
+    <!-- Contact Us Section -->
+<section class="ContactUs" id="contactus">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col">
+        <h1 class="text-center" id="title">
+          CONTACT US
+        </h1>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <!-- Contact Form -->
+      <div class="col-md-6" style="border: 2px solid black;">
+        <div class="contact-box h-100">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputfirstName" class="form-label fw-bold">First Name</label>
+              <input type="text" class="form-control" id="exampleInputfirstName" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputlastName" class="form-label fw-bold">Last Name</label>
+              <input type="text" class="form-control" id="exampleInputlastName"required>
+            </div>
+
+            <div class="mb-3">
+              <label for="inputAddress" class="form-label fw-bold">Address</label>
+              <input type="text" class="form-control" id="inputAddress" required>
+            </div>
+
+           <div class="row mb-3">
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label fw-bold">City</label>
+    <input type="text" class="form-control" id="inputCity" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputState" class="form-label fw-bold">State</label>
+    <select id="inputState" class="form-select" style="margin-top: 10px;">
+      <option selected disabled>Choose...</option>
+      <option>Maharashtra</option>
+      <option>Karnataka</option>
+      <option>Gujarat</option>
+      <option>Delhi</option>
+      <option>Goa</option>
+    </select>
+  </div>
+</div>
+
+
+            <div class="mb-3 form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">Check me out</label>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-primary submit-btn" type="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-md-6">
+        <div class="map-box h-150">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.0302010449986!2d74.00116847494228!3d17.696033383244735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc239bf2b1eab1b%3A0xe0c9d5ec4e87e9c6!2sLAPTOP%20SPACE!5e0!3m2!1sen!2sin!4v1757049399965!5m2!1sen!2sin"
+            width="100%" height="460px" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="footer container py-4 mt-5" style="background-color: lightgray; ">
+      <div class="row">
+        <div class="col-md-3">
+          <p style="font-size: 35px;">Shop Non-Stop on <b>Laptop Wolrd</b></p>
+          <p>Trusted by crores of Indians<br>Cash on Delivery | Free Delivery</p>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="./images/gfooter.png" width="150px">
+            </div>
+            <div class="col-md-6">
+              <img src="./images/app.png" width="150px">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <ul>
+            <a href="./career.html">
+              <li>Careers</li>
+            </a><br>
+            <a href="./bs.html">
+              <li>Become a supplier</li>
+            </a><br>
+            <a href="./faq.html">
+              <li>FAQ'S</li>
+            </a><br>
+            <a href="#contact">
+              <li>Sitemap</li>
+            </a><br>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <ul>
+            <a href="./privacy.html">
+              <li>Privacy Policy</li>
+            </a> <br>
+
+            <a href="./notice.html">
+              <li>Notices and Returns</li><br>
+            </a>
+          </ul>
+        </div>
+
+        <!-- Reach Out Section -->
+        <div class="col-md-2 text-center">
+          <div style="font-size: 25px;">
+            <b>Reach Out to Us</b>
+          </div>
+          <div class="d-flex justify-content-center gap-2 mt-2">
+            <a href="https://www.facebook.com/p/Laptop-SPACE-100063985306507/" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/fluency/30/facebook-new.png" alt="facebook-new" />
+            </a>
+            <a href="https://www.instagram.com/laptop_space/?hl=en" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" />
+            </a>
+            <a href="#" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/color/30/youtube-play.png" alt="youtube-play" />
+            </a>
+            <a href="#" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/color/30/linkedin.png" alt="linkedin" />
+            </a>
+            <a href="#" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 pr-3 ">
+          <p style="font-size: 25px;"><b>Contact Us</b></p>
+          <p style="font-size: 15px;">
+            Laptop Space in Satara has <br>
+            Two Listed Location:<br>
+            (1) Upper Ground Floor,Shop<br>
+            No 16,Shahu Stadium, Sadar<br>
+            Bazar Satara, 4150002<br><br>
+            (2) Shahu Stadium, B1-Shop No-1<br>
+            Adarsh Corner Appartment, Opposite<br>
+            Rajtara Hotel,Radhika Road,Satara,<br>
+            4150002
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartCountElement = document.getElementById('cart-count');
+      cartCountElement.textContent = cart.length;
+
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = {
+            name: button.getAttribute('data-name'),
+            price: button.getAttribute('data-price'),
+            img: button.getAttribute('data-images')
+          };
+          cart.push(item);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          cartCountElement.textContent = cart.length;
+          //alert(item.name + " added to cart!");
+        });
+      });
+
+
+      function msg(event) {
+        event.preventDefault();
+        alert("form submited Sucessfully!")
+        window.location.reload();
+
+      }
+    </script>
+
+ <script>
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const wishlistCountElement = document.getElementById('wishlist-count');
+      wishlistCountElement.textContent = wishlist.length;
+
+      document.querySelectorAll('.add-to-wish').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = {
+            name: button.getAttribute('data-name'),
+            price: button.getAttribute('data-price'),
+            img: button.getAttribute('data-image')
+          };
+          wishlist.push(item);
+          localStorage.setItem("wishlist", JSON.stringify(wishlist));
+          wishlistCountElement.textContent = wishlist.length;
+        });
+      });
+    </script>
+
+<script>
+let currentMethod = "";
+let selectedProduct = {};
+
+function buyNow(name, price) {
+    selectedProduct = { name, price };
+
+    // Update product info
+    document.getElementById("pName").innerText = name;
+    document.getElementById("pPrice").innerText = price;
+    document.getElementById("checkoutAmount").innerText = price;
+      document.getElementById("paymentSection").classList.remove("hidden");
+
+    // Sections to hide
+    const sectionsToHide = [
+        "productSection",
+        "productSection1",
+         // assuming you want to show it? keep/remove as needed
+        "see-more",
+        "title",
+        "contactus",
+        "carouselExampleCaptions"
+    ];
+
+    sectionsToHide.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.classList.add("hidden");
+        } else {
+            console.warn(`Element with ID '${id}' not found`);
+        }
+    });
+
+    // Hide navbar
+    const navbar = document.querySelector("nav.navbar");
+    if (navbar) navbar.classList.add("hidden");
+
+    // Hide footer
+    const footer = document.querySelector("section.footer");
+    if (footer) footer.classList.add("hidden");
+
+}
+
+
+        function toggleCODForm() {
+            document.getElementById("codForm").classList.toggle("hidden");
+        }
+
+        function showOnline() {
+            document.getElementById("onlinePayment").classList.toggle("hidden");
+        }
+
+        function submitCOD(event) {
+            event.preventDefault();
+            alert("Order placed successfully with Cash on Delivery!");
+            backToProducts();
+        }
+
+        function openCheckout(method) {
+            currentMethod = method;
+            document.getElementById("checkoutTitle").innerText = method + " Checkout";
+            document.getElementById("checkoutAmount").innerText = selectedProduct.price;
+            document.getElementById("checkoutScreen").style.display = "block";
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "none";
+        }
+
+        function goToPinScreen() {
+            document.getElementById("checkoutScreen").style.display = "none";
+            document.getElementById("pinTitle").innerText = "Enter " + currentMethod + " PIN";
+            document.getElementById("pinScreen").style.display = "block";
+        }
+
+        function completePayment() {
+            let pin = document.getElementById("upiPin").value;
+            if (pin.length < 4) {
+                alert("Please enter valid PIN");
+                return;
+            }
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "block";
+            document.getElementById("upiPin").value = "";
+        }
+
+        function backToProducts() {
+            // document.getElementById("paymentSection").classList.add("hidden");
+            // document.getElementById("productSection").classList.remove("hidden");
+            // document.getElementById("codForm").classList.add("hidden");
+            // document.getElementById("onlinePayment").classList.add("hidden");
+            // document.getElementById("checkoutScreen").style.display = "none";
+            // document.getElementById("pinScreen").style.display = "none";
+            // document.getElementById("successScreen").style.display = "none";
+                  window.location.href = "index.html";
+
+        }
+
+
+</script>
+
+
+  
+
+  
+   </body>
+
+</html>

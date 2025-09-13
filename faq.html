@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ - Frequently Asked Questions</title>
+  <style>
+    body {font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#f8f9fa}
+    .faq-header {text-align:center; margin:2rem 0}
+    .accordion-button::after {flex-shrink:0; width:1.25rem; height:1.25rem; margin-left:auto; content:""; background-image:url('data:image/svg+xml,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22currentColor%22%3e%3cpath stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M12 4v16m8-8H4%22 /%3e%3c/svg%3e'); background-repeat:no-repeat; background-size:1.25rem; transition:transform .2s ease-in-out}
+    .accordion-button:not(.collapsed)::after {transform:rotate(45deg)}
+  </style>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container py-5">
+    <div class="faq-header">
+      <h1 class="h3">❓ Frequently Asked Questions</h1>
+      <p class="text-muted">Find answers to the most common questions below.</p>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+            What is the return policy for laptops?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Laptops can be returned within <strong>7 days</strong> of purchase if unused and in original condition. For warranty issues, please contact our support team.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            How do I contact support?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can reach our support team via email at <a href="mailto:support@example.com">laptopspace@hotmail.com</a> or call us at <em>+91 9765000888</em> between 9am and 6pm IST.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Do you provide technical assistance?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes. Our technical support covers troubleshooting, software installation, and basic repairs. For advanced issues, devices may need to be sent to an authorized service center.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            Can I track my order?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes. Once your order is shipped, you will receive a tracking link via email and SMS to monitor your delivery status in real time.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            What payment methods are accepted?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We accept UPI, credit/debit cards, net banking, and wallets like PhonePe and Paytm. Cash on Delivery (COD) is available in select locations.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

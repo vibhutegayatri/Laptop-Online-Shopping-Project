@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/laptop1.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-4 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/laptop.png" height="50" alt="Logo"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contactus">Contact Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Brand
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./apple.html">Apple</a></li>
+                <li><a class="dropdown-item" href="./asus.html">Asus</a></li>
+                <li><a class="dropdown-item" href="./dell.html">Dell</a></li>
+                <li><a class="dropdown-item" href="./hp.html">HP</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center flex-wrap">
+            <a href="./addtocart.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="fa-solid fa-cart-shopping navbar-icon text-white"></i>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <a href="wishlist.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="bi bi-heart-fill navbar-icon text-white"></i>
+              <span id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="font-size: 40px;">
+                <i class="bi bi-person-fill navbar-icon text-white"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                 <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                            <li><a class="dropdown-item" href="./reg.html">Register</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="d-flex mt-2 mt-lg-0 ms-lg-3">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="height: 35px; margin-top: 10px;">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
+   <script>
+      function logout(){
+        window.location.href="https://www.google.com/"
+      }
+    </script>
+
+
+  <!-- images -->
+
+   <h1 id="title">Asus Companye's Laptop</h1>
+
+
+    <section class="header container" id="productSection">
+        <br>
+
+        <div align="center">
+            <div class="row ">
+                <div class="col-md-4" id="imgaes">
+                    <img src="./images/asus/1.jpg" height="295px" style="margin-top: 10px;">
+                    <br>
+                    <p><b>Asus VivoBook 15 Core i3 11th <br>11th Gen 8GB Ram<br>512GB SSD 15.6 FHD
+                            Laptop</b><br><b>70,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+    data-name="Asus VivoBook 15 Core i3 11th Gen 8GB Ram 512GB SSD 15.6 FHD Laptop"
+    data-price="70,000/-"
+    data-image="./images/asus/1.jpg">
+    <i class="bi bi-heart"></i>
+  </button>
+                            </b></p>
+                    <button class="btn btn-primary" id="to"
+                        onclick="buyNow('Asus VivoBook 15 Core i3 11th 11th Gen 8GB Ram 512GB SSD 15.6 FHD Laptop','70,000/-Rs')">Shop
+                        Now</button>
+                    <button class="btn btn-primary add-to-cart" id="to"
+                        data-name="<b>Asus VivoBook 15 Core i3 11th <br>11th Gen 8GB Ram<br>512GB SSD 15.6 FHD Laptop</b>"
+                        data-price="70000" data-images="./images/asus/1.jpg">Add to Cart</button>
+                </div>
+
+                <div class="col-md-4" id="imgaes">
+                    <img src="./images/asus/2.jpg" height="290px" style="margin-top: 10px;"><br>
+                    <p style="margin-top: 6px;"><b>Asus ROG Zephyrus Duo 15<br> Intel Core i9-10980HK<br>8GB Graphics &
+                            Gaming Laptop</b><br><b>65,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                    data-name="Asus ROG Zephyrus Duo 15 Intel Core i9-10980HK 8GB Graphics & Gaming Laptop"
+                                    data-price="65,000/-"
+                                    data-image="./images/asus/2.jpg">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </b></p>
+                    <button class="btn btn-primary" id="to"
+                        onclick="buyNow('Asus ROG Zephyrus Duo 15 Intel Core i9-10980HK 8GB Graphics & Gaming Laptop','65,000/-Rs')">Shop
+                        Now</button>
+                    <button class="btn btn-primary add-to-cart" id="to"
+                        data-name="<b>Asus ROG Zephyrus Duo 15<br> Intel Core i9-10980HK<br>8GB Graphics & Gaming Laptop</b>"
+                        data-price="65000" data-images="./images/asus/2.jpg">Add to Cart</button>
+
+                </div>
+
+                <div class="col-md-4" style="margin-top: 60px;">
+                    <img src="./images/asus/3.jpg" height="200px">
+                    <br><br><br>
+                    <p style="margin-top: 0px;"><b>Asus ProARt Studio Book Pro<br>15 intel 15.6 inches <br>48GB DDR4
+                            Windows 10 Pro</b><br><b>68,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                    data-name="Asus ProARt Studio Book Pro 15 intel 15.6 inches 48GB DDR4 Windows 10 Pro"
+                                    data-price="68,000/-"
+                                    data-image="./images/asus/3.jpg">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </b></p>
+                    <button class="btn btn-primary" id="to"
+                        onclick="buyNow('Asus ProARt Studio Book Pro15 intel 15.6 inches 48GB DDR4 Windows 10 Pro','68,000/-Rs')">Shop
+                        Now</button>
+                    <button class="btn btn-primary add-to-cart" id="to"
+                        data-name="<b>Asus ProARt Studio Book Pro<br>15 intel 15.6 inches <br>48GB DDR4 Windows 10 Pro</b>"
+                        data-price="68000" data-images="./images/asus/3.jpg">Add to Cart</button>
+
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/4.jpg" height="213px" width="270px">
+                        <br>
+                        <p><b>Asus Vivobook EcpertBook Series<br>Intel i5, 8GB Ram, 512GB SSD<br>compact and lightweight
+                                nature</b><br><b>70,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus Vivobook EcpertBook Series Intel i5, 8GB Ram, 512GB SSD compact and lightweight nature"
+                                        data-price="70,000/-"
+                                        data-image="./images/asus/4.jpg">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus Vivobook EcpertBook Series Intel i5, 8GB Ram, 512GB SSD compact and lightweight nature','70,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus Vivobook EcpertBook Series<br>Intel i5, 8GB Ram, 512GB SSD<br>compact and lightweight nature</b>"
+                            data-price="70000" data-images="./images/asus/4.jpg">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/5.jpg" height="213px" width="270px">
+                        <br>
+                        <p style="margin-top: 7px;"><b>Asus Zenbook UX43OUA<br>Intel core i5-7200U<br>8GB DDR4 | 256GB
+                                SSD</b><br><b>60,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus Zenbook UX43OUA Intel core i5-7200U 8GB DDR4 | 256GB SSD"
+                                        data-price="60,000/-"
+                                        data-image="./images/asus/5.jpg">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus Zenbook UX43OUA Intel core i5-7200U 8GB DDR4 | 256GB SSD','60,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus Zenbook UX43OUA<br>Intel core i5-7200U<br>8GB DDR4 | 256GB SSD</b>"
+                            data-price="60000" data-images="./images/asus/5.jpg">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/6.png" height="215px"><br>
+                        <p><b>Asus VivoBook Go 14<br>8GB RAM | 512 SSD Windows 11<br>Thin and light
+                                laptop</b><br><b>55,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus VivoBook Go 14 8GB RAM | 512 SSD Windows 11 Thin and light laptop"
+                                        data-price="55,000/-"
+                                        data-image="./images/asus/6.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus VivoBook Go 14 8GB RAM | 512 SSD Windows 11 Thin and light laptop</b>','55,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus VivoBook Go 14<br>8GB RAM | 512 SSD Windows 11<br>Thin and light laptop</b>"
+                            data-price="55000" data-images="./images/asus/6.png">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- see more photos -->
+    <section id="productSection1">
+        <div align="center" style="margin-top: 30px;">
+            <button onclick="showPhotos()" id="see-more" class="see">See More</button>
+        </div>
+        <br>
+        <br>
+        <div id="photos-section" class="container">
+            <div align="center">
+                <div class="row py-3 ">
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/7.png" height="190px" width="250px">
+                        <br><br>
+                        <p><b>Asus Vivobook M415DA <br> 8GB RAM | 1 TB HDD Fingerprint Reader<br>full-size chiclet
+                                keyboard</b><br><b>55,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus Vivobook M415DA  8GB RAM | 1 TB HDD Fingerprint Reader full-size chiclet keyboard"
+                                        data-price="55,000/-"
+                                        data-image="./images/asus/7.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus Vivobook M415DA  8GB RAM | 1 TB HDD Fingerprint Reader full-size chiclet keyboard','55,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus Vivobook M415DA <br> 8GB RAM | 1 TB HDD Fingerprint Reader<br>full-size chiclet keyboard</b>"
+                            data-price="55000" data-images="./images/asus/7.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/8.png" height="213px" width="270px"><br>
+                        <p><b>Asus Newest VivoBook 15 laptop<br>Intel Core i5-1135G7 Processor<br> 12GB RAM | 1 TB
+                                SSD</b><br><b>68,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus Newest VivoBook 15 laptop Intel Core i5-1135G7 Processor 12GB RAM | 1 TB SSD"
+                                        data-price="68,000/-"
+                                        data-image="./images/asus/8.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus Newest VivoBook 15 laptop Intel Core i5-1135G7 Processor 12GB RAM | 1 TB SSD','68,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus Newest VivoBook 15 laptop<br>Intel Core i5-1135G7 Processor<br> 12GB RAM | 1 TB SSD</b>"
+                            data-price="68000" data-images="./images/asus/8.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/9.png" height="210px" width="270px"><br>
+                        <p><b>Asus TUF Gaming Core i5<br>10th Gen Windows 10<br>16GB RAM | 512GB SSD</b><br><b>78,000/-
+                                Rs
+                            <button class="wishlist-btn add-to-wish"
+                                data-name="Asus TUF Gaming Core i5 10th Gen Windows 10 16GB RAM | 512GB SSD"
+                                data-price="78,000/-"
+                                data-image="./images/asus/9.png">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus TUF Gaming Core i5 10th Gen Windows 10 16GB RAM | 512GB SSD','78,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus TUF Gaming Core i5<br>10th Gen Windows 10<br>16GB RAM | 512GB SSD</b>"
+                            data-price="78000" data-images="./images/asus/9.png">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/10.png" height="210px" width="270px">
+                        <br>
+                        <p><b>Asus Zenbook 13 UX331UN<br>FDH Touchscreen Ultra Slim laptop<br>intel core i5 8GB |
+                                256GB</b><br><b>67,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus Zenbook 13 UX331UN FDH Touchscreen Ultra Slim laptop intel core i5 8GB | 256GB"
+                                        data-price="67,000/-"
+                                        data-image="./images/asus/10.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus Zenbook 13 UX331UN FDH Touchscreen Ultra Slim laptop intel core i5 8GB | 256GB','67,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus Zenbook 13 UX331UN<br>FDH Touchscreen Ultra Slim laptop<br>intel core i5 8GB | 256GB</b>"
+                            data-price="67000" data-images="./images/asus/10.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/11.png" height="210px" width="270px">
+                        <br>
+                        <p><b>Asus UL20 Serires laptop<br>intel core i3 processor<br>Thin and light 12-inch
+                                laptop</b><br><b>71,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus UL20 Serires laptop intel core i3 processor Thin and light 12-inch laptop"
+                                        data-price="71,000/-"
+                                        data-image="./images/asus/11.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus UL20 Serires laptop intel core i3 processor Thin and light 12-inch laptop','71,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus UL20 Serires laptop<br>intel core i3 processor<br>Thin and light 12-inch laptop</b>"
+                            data-price="71000" data-images="./images/asus/11.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/12.png" height="210px" width="270px"><br>
+                        <p><b>Asus GM501GM-WS74 ROG<br>Intel core i7 Processore<br>16GB DDR4 | Hard Drive
+                                256GB</b><br><b>64,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus GM501GM-WS74 ROG Intel core i7 Processore 16GB DDR4 | Hard Drive 256GB"
+                                        data-price="64,000/-"
+                                        data-image="./images/asus/12.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus GM501GM-WS74 ROG Intel core i7 Processore 16GB DDR4 | Hard Drive 256GB','64,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus GM501GM-WS74 ROG<br>Intel core i7 Processore<br>16GB DDR4 | Hard Drive 256GB</b>"
+                            data-price="64000" data-images="./images/asus/12.png">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes" style="margin-top: 45px;">
+                        <img src="./images/asus/13.png" height="210px" width="270px">
+                        <br>
+                        <p><b>Asus ROG Zephyrus Duo <br>SE 15 Gaming Laptop 32GB RAM<br>5th Gen AMD Ryzen 9
+                                processor</b><br><b>67,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus ROG Zephyrus Duo SE 15 Gaming Laptop 32GB RAM 5th Gen AMD Ryzen 9 processor"
+                                        data-price="67,000/-"
+                                        data-image="./images/asus/13.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus ROG Zephyrus Duo SE 15 Gaming Laptop 32GB RAM 5th Gen AMD Ryzen 9 processor','67,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus ROG Zephyrus Duo <br>SE 15 Gaming Laptop 32GB RAM<br>5th Gen AMD Ryzen 9 processor</b>"
+                            data-price="67000" data-images="./images/asus/13.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes" style="margin-top: 45px;">
+                        <img src="./images/asus/14.png" height="210px" width="270px">
+                        <br>
+                        <p><b>Asus X Series Intel Core i3<br>5th Gen 5010U 4GB RAm<br>AMD E1-6010 | 1
+                                TB</b><br><b>40,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus X Series Intel Core i3 5th Gen 5010U 4GB RAm AMD E1-6010 | 1 TB"
+                                        data-price="40,000/-"
+                                        data-image="./images/asus/14.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus X Series Intel Core i3 5th Gen 5010U 4GB RAm AMD E1-6010 | 1 TB','40,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus X Series Intel Core i3<br>5th Gen 5010U 4GB RAm<br>AMD E1-6010 | 1 TB</b>"
+                            data-price="40000" data-images="./images/asus/14.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/15.png" height="250px"><br>
+                        <p><b>Asus ROG Zephyrus G14 <br> 16GB RAM | 1 TB SSD Stroge <br> Windows 11 | 8GB
+                                Graphics</b><br><b>69,500/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus ROG Zephyrus G14  16GB RAM | 1 TB SSD Stroge Windows 11 | 8GB Graphics"
+                                        data-price="69,500/-"
+                                        data-image="./images/asus/15.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus ROG Zephyrus G14  16GB RAM | 1 TB SSD Stroge  Windows 11 | 8GB Graphics','69,500/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus ROG Zephyrus G14 <br> 16GB RAM | 1 TB SSD Stroge <br> Windows 11 | 8GB Graphics</b>"
+                            data-price="69500" data-images="./images/asus/15.png">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/16.png" height="210px" width="280px">
+                        <br>
+                        <p><b>Asus VivoBook 15 X1504ZA<br> Intel Core i3-2115U <br> 8GB DDR4 | 512GB
+                                SSD</b><br><b>55,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus VivoBook 15 X1504ZA Intel Core i3-2115U  8GB DDR4 | 512GB SSD"
+                                        data-price="55,000/-"
+                                        data-image="./images/asus/16.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus VivoBook 15 X1504ZA Intel Core i3-2115U  8GB DDR4 | 512GB SSD','55,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus VivoBook 15 X1504ZA<br> Intel Core i3-2115U <br> 8GB DDR4 | 512GB SSD</b>"
+                            data-price="55000" data-images="./images/asus/16.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/17.png" height="210px" width="280px">
+                        <br>
+                        <p><b>Asus Chromebook Intel Core N4500<br> 4GB | 64GB EMMC Storage<br>15.6 Inch, Transparent
+                                Silver</b><br><b>70,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus Chromebook Intel Core N4500 4GB | 64GB EMMC Storage 15.6 Inch, Transparent Silver"
+                                        data-price="70,000/-"
+                                        data-image="./images/asus/17.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus Chromebook Intel Core N4500<br> 4GB | 64GB EMMC Storage<br>15.6 Inch, Transparent Silver','70,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus Chromebook Intel Core N4500<br> 4GB | 64GB EMMC Storage<br>15.6 Inch, Transparent Silver</b>"
+                            data-price="70000" data-images="./images/asus/17.png">Add to Cart</button>
+
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/asus/18.png" height="210px" width="270px"><br>
+                        <p><b>Asus VivoBook 15(2023) 13th Gen<br>Thin And Light Laptop<br>16GB RAM | 512GB SSD |
+                                FingerPrint</b><br><b>80,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="Asus VivoBook 15(2023) 13th Gen Thin And Light Laptop 16GB RAM | 512GB SSD | FingerPrint"
+                                        data-price="80,000/-"
+                                        data-image="./images/asus/18.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('Asus VivoBook 15(2023) 13th Gen Thin And Light Laptop 16GB RAM | 512GB SSD | FingerPrint','80,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>Asus VivoBook 15(2023) 13th Gen<br>Thin And Light Laptop<br>16GB RAM | 512GB SSD | FingerPrint</b>"
+                            data-price="80000" data-images="./images/asus/18.png">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+            <div align="center" style="margin-top: 30px;">
+                <button class="see" onclick="hidePhotos()">See Less</button>
+            </div>
+        </div>
+
+
+    </section>
+
+
+     <!-- PAYMENT SECTION -->
+    <section id="paymentSection" class="hidden">
+        <h3>Order Now!</h3>
+        <div class="order-summary">
+            <p><b>Product:</b> <span id="pName"></span></p>
+            <p><b>Price:</b> <span id="pPrice"></span></p>
+        </div>
+        <h2>Select Payment Option</h2>
+        <div class="payment-options">
+            <button onclick="toggleCODForm()">Cash on Delivery</button>
+            <button onclick="showOnline()">Cash on Online</button>
+        </div>
+        <!-- COD Form -->
+        <form id="codForm" onsubmit="submitCOD(event)" class="hidden">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Address" required>
+            <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}">
+            <input type="text" placeholder="State" required>
+            <input type="text" placeholder="City" required>
+            <input type="number" placeholder="Pin Code" required><br>
+            <button type="submit">Place Order</button>
+        </form>
+        <!-- Online Payment -->
+        <div id="onlinePayment" class="hidden">
+            <h3>Choose Online Payment Method</h3>
+            <div class="online-options">
+                <button onclick="openCheckout('PhonePe')">PhonePe</button>
+                <button onclick="openCheckout('Google Pay')">Google Pay</button>
+                <button onclick="openCheckout('Paytm')">Paytm</button>
+                <button onclick="openCheckout('PayPal')">PayPal</button>
+            </div>
+        </div>
+        <!-- Checkout + PIN + Success -->
+        <div id="checkoutScreen" class="checkout-screen">
+            <h3 id="checkoutTitle">Checkout</h3>
+            <p>Amount: <b><span id="checkoutAmount">₹0</span></b></p>
+            <button class="btn btn-primary" onclick="goToPinScreen()">Pay</button>
+        </div>
+        <div id="pinScreen" class="pin-screen">
+            <h3 id="pinTitle">Enter PIN</h3>
+            <input type="password" id="upiPin" placeholder="****" maxlength="6" required>
+            <button class="btn btn-primary" onclick="completePayment()">Submit</button>
+        </div>
+        <div id="successScreen" class="success-screen">
+            <p class="success">✅ Payment Successful!</p>
+            <p>Your order has been placed.</p>
+            <button class="btn btn-primary" onclick="backToProducts()">Back to Products</button>
+        </div>
+    </section>
+
+    
+<script>
+   let currentMethod = "";
+        let selectedProduct = {};
+
+        function buyNow(name, price) {
+            selectedProduct = { name, price };
+            document.getElementById("pName").innerText = name;
+            document.getElementById("pPrice").innerText = price;
+            document.getElementById("checkoutAmount").innerText = price;
+
+            document.getElementById("productSection").classList.add("hidden");
+            document.getElementById("paymentSection").classList.remove("hidden");
+            document.querySelector("nav.navbar").classList.add("hidden");
+            document.querySelector("section.footer").classList.add("hidden");
+            document.getElementById("see-more").classList.add("hidden");
+            document.getElementById("title").classList.add("hidden");
+            document.getElementById("productSection1").classList.add("hidden");
+
+
+
+        }
+
+        function toggleCODForm() {
+            document.getElementById("codForm").classList.toggle("hidden");
+        }
+
+        function showOnline() {
+            document.getElementById("onlinePayment").classList.toggle("hidden");
+        }
+
+        function submitCOD(event) {
+            event.preventDefault();
+            alert("Order placed successfully with Cash on Delivery!");
+            backToProducts();
+        }
+
+        function openCheckout(method) {
+            currentMethod = method;
+            document.getElementById("checkoutTitle").innerText = method + " Checkout";
+            document.getElementById("checkoutAmount").innerText = selectedProduct.price;
+            document.getElementById("checkoutScreen").style.display = "block";
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "none";
+        }
+
+        function goToPinScreen() {
+            document.getElementById("checkoutScreen").style.display = "none";
+            document.getElementById("pinTitle").innerText = "Enter " + currentMethod + " PIN";
+            document.getElementById("pinScreen").style.display = "block";
+        }
+
+        function completePayment() {
+            let pin = document.getElementById("upiPin").value;
+            if (pin.length < 4) {
+                alert("Please enter valid PIN");
+                return;
+            }
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "block";
+            document.getElementById("upiPin").value = "";
+        }
+
+        function backToProducts() {
+            // document.getElementById("paymentSection").classList.add("hidden");
+            // document.getElementById("productSection").classList.remove("hidden");
+            // document.getElementById("codForm").classList.add("hidden");
+            // document.getElementById("onlinePayment").classList.add("hidden");
+            // document.getElementById("checkoutScreen").style.display = "none";
+            // document.getElementById("pinScreen").style.display = "none";
+            // document.getElementById("successScreen").style.display = "none";
+                  window.location.href = "index.html";
+
+        }
+
+
+</script>
+
+
+
+
+
+
+  <script>
+
+    function showPhotos() {
+      document.getElementById("photos-section").style.display = "block";
+      document.getElementById("see-more").style.display = "none";
+    }
+
+    function hidePhotos() {
+      document.getElementById("photos-section").style.display = "none";
+      document.getElementById("see-more").style.display = "inline-block";
+    }
+
+
+
+
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cart.length;
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.getAttribute('data-name'),
+          price: button.getAttribute('data-price'),
+          img: button.getAttribute('data-images')
+        };
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartCountElement.textContent = cart.length;
+        //alert(item.name + " added to cart!");
+      });
+    });
+
+
+    function msg(event) {
+      event.preventDefault();
+      alert("form submited Sucessfully!")
+      window.location.reload();
+
+    }
+  </script>
+
+  <script>
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const wishlistCountElement = document.getElementById('wishlist-count');
+    wishlistCountElement.textContent = wishlist.length;
+
+    document.querySelectorAll('.add-to-wish').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.getAttribute('data-name'),
+          price: button.getAttribute('data-price'),
+          img: button.getAttribute('data-image')
+        };
+        wishlist.push(item);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        wishlistCountElement.textContent = wishlist.length;
+      });
+    });
+  </script>
+
+
+  <section class="footer container py-4 mt-5" style="background-color: lightgray; ">
+    <div class="row">
+      <div class="col-md-3">
+        <p style="font-size: 35px;">Shop Non-Stop on <b>Laptop Wolrd</b></p>
+        <p>Trusted by crores of Indians<br>Cash on Delivery | Free Delivery</p>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./images/gfooter.png" width="150px">
+          </div>
+          <div class="col-md-6">
+            <img src="./images/app.png" width="150px">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <ul>
+          <a href="./career.html">
+            <li>Careers</li>
+          </a><br>
+          <a href="./bs.html">
+            <li>Become a supplier</li>
+          </a><br>
+          <a href="./faq.html">
+            <li>FAQ'S</li>
+          </a><br>
+          <a href="#contact">
+            <li>Sitemap</li>
+          </a><br>
+        </ul>
+      </div>
+
+      <div class="col-md-2">
+        <ul>
+          <a href="./privacy.html">
+            <li>Privacy Policy</li>
+          </a> <br>
+
+          <a href="./notice.html">
+            <li>Notices and Returns</li><br>
+          </a>
+        </ul>
+      </div>
+
+      <!-- Reach Out Section -->
+      <div class="col-md-2 text-center">
+        <div style="font-size: 25px;">
+          <b>Reach Out to Us</b>
+        </div>
+        <div class="d-flex justify-content-center gap-2 mt-2">
+          <a href="https://www.facebook.com/p/Laptop-SPACE-100063985306507/" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/fluency/30/facebook-new.png" alt="facebook-new" />
+          </a>
+          <a href="https://www.instagram.com/laptop_space/?hl=en" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/30/youtube-play.png" alt="youtube-play" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/30/linkedin.png" alt="linkedin" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1" />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 pr-3 ">
+        <p style="font-size: 25px;"><b>Contact Us</b></p>
+        <p style="font-size: 15px;">
+          Laptop Space in Satara has <br>
+          Two Listed Location:<br>
+          (1) Upper Ground Floor,Shop<br>
+          No 16,Shahu Stadium, Sadar<br>
+          Bazar Satara, 4150002<br><br>
+          (2) Shahu Stadium, B1-Shop No-1<br>
+          Adarsh Corner Appartment, Opposite<br>
+          Rajtara Hotel,Radhika Road,Satara,<br>
+          4150002
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

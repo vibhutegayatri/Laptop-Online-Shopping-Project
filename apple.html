@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/laptop.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-4 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/laptop.png" height="50" alt="Logo"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contactus">Contact Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Brand
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./apple.html">Apple</a></li>
+                <li><a class="dropdown-item" href="./asus.html">Asus</a></li>
+                <li><a class="dropdown-item" href="./dell.html">Dell</a></li>
+                <li><a class="dropdown-item" href="./hp.html">HP</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center flex-wrap">
+            <a href="./addtocart.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="fa-solid fa-cart-shopping navbar-icon text-white"></i>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <a href="wishlist.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="bi bi-heart-fill navbar-icon text-white"></i>
+              <span id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="font-size: 40px;">
+                <i class="bi bi-person-fill navbar-icon text-white"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                 <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                            <li><a class="dropdown-item" href="./reg.html">Register</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="d-flex mt-2 mt-lg-0 ms-lg-3">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="height: 35px; margin-top: 10px;">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
+ <script>
+      function logout(){
+        window.location.href="https://www.google.com/"
+      }
+    </script>
+  <!-- images -->
+
+  <h1 id="title">Apple Companye's Laptop</h1>
+
+
+  <section id="productSection" class="header container">
+    <br>
+
+    <div align="center">
+      <div class="row ">
+        <div class="col-md-4" id="imgaes">
+          <img src="./images/Apple/A1.jpg" height="300px">
+          <br>
+          <p><b>MacBook Pro Model <br> Apple's M-sereies Chip<br>(like M2 Pro, M2 MAX)</b><br><b>90,000/-
+              Rs
+              <button class="wishlist-btn add-to-wish"
+                data-name="MacBook Pro Model Apple's M-sereies Chip(like M2 Pro, M2 MAX)" data-price="90,000/-"
+                data-image="./images/Apple/A1.jpg">
+                <i class="bi bi-heart"></i>
+              </button></b></p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('MacBook Pro Model Apples M-sereies Chip(like M2 Pro, M2 MAX)','90,000')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>MacBook Pro Model <br> Apple's M-sereies Chip<br>(like M2 Pro, M2 MAX)</b>" data-price="90000"
+            data-images="./images/Apple/A1.jpg">Add to Cart</button>
+        </div>
+
+        <div class="col-md-4" id="imgaes">
+          <img src="./images/Apple/A2.jpg" height="300px"><br>
+          <p><b>Recent Model like those<br>with the M4 chip feature<br>a 10-core, 10-core
+              GPU</b><br><b>85,000/- Rs
+              <button class="wishlist-btn add-to-wish"
+                data-name="Recent Model like those with the M4 chip feature a 10-core, 10-core GPU"
+                data-price="85,000/-" data-image="./images/Apple/A2.jpg">
+                <i class="bi bi-heart"></i>
+              </button></b></p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('Recent Model like those with the M4 chip feature a 10-core, 10-core GPU','85,000/-Rs')">Shop
+            Now</button>
+
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="<b>Recent Model like those<br>with the M4 chip feature<br>a 10-core, 10-core GPU</b>"
+            data-price="85000" data-images="./images/Apple/A2.jpg">Add to Cart</button>
+        </div>
+
+        <div class="col-md-4" style="margin-top: 60px;">
+          <img src="./images/Apple/A3.jpg" height="185px">
+          <br><br><br>
+          <p><b>Mac models, including the<br>iMac, Mac mini,<br> MacBook Air</b><br><b>70,000/- Rs
+              <button class="wishlist-btn add-to-wish" data-name="Mac models, including the iMac, Mac mini, MacBook Air"
+                data-price="70,000/-" data-image="./images/Apple/A3.jpg">
+                <i class="bi bi-heart"></i>
+              </button>
+            </b></p>
+          <button class="btn btn-primary" id="to"
+            onclick="buyNow('Mac models, including the iMac, Mac mini, MacBook Air','70,000/-Rs')">Shop
+            Now</button>
+          <button class="btn btn-primary add-to-cart" id="to"
+            data-name="Mac models, including the<br>iMac, Mac mini,<br> MacBook Air" data-price="70000"
+            data-images="./images/Apple/A3.jpg">Add to
+            Cart</button>
+        </div>
+      </div>
+      
+
+      <br>
+      <br>
+      <div align="center">
+        <div class="row">
+          <div class="col-md-4" id="imgaes" style="margin-top: 20px;">
+            <img src="./images/Apple/A4.jpg" height="220px">
+            <br>
+            <p><b>Apple Offiers MacBook Air<br>including M1, M2, M4 Pro<br>long battery
+                life</b><br><b>75,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple Offiers MacBook Air including M1, M2, M4 Pro long battery life" data-price="75,000/-"
+                  data-image="./images/Apple/A4.jpg">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple Offiers MacBook Air including M1, M2, M4 Pro long battery life','75,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple Offiers MacBook Air<br>including M1, M2, M4 Pro<br>long battery life</b>"
+              data-price="75000" data-images="./images/Apple/A4.jpg">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgs" style="margin-top: 20px;">
+            <img src="./images/Apple/5.png" height="220px">
+            <br>
+            <p><b>Especially the pro models<br>M4 family of chips<br>six-speaker sound</b><br><b>85,000/-
+                Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Especially the pro models M4 family of chips six-speaker sound" data-price="85,000/-"
+                  data-image="./images/Apple/5.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Especially the pro models M4 family of chips six-speaker sound','85,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Especially the pro models<br>M4 family of chips<br>six-speaker sound</b>" data-price="85000"
+              data-images="./images/Apple/5.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes" style="margin-top: 20px;">
+            <img src="./images/Apple/6.png" height="220px"><br>
+            <p><b>Apple M-series chips<br>Providing high performance<br>2.3GHz dual-core intel Core
+                i5</b><br><b>95,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple M-series chips Providing high performance 2.3GHz dual-core intel Core i5"
+                  data-price="95,000/-" data-image="./images/Apple/6.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple M-series chips Providing high performance 2.3GHz dual-core intel Core i5','95,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to" data-name="" data-price="95000"
+              data-images="./images/Apple/6.png">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- see more photos -->
+
+
+  <section id="productSection1">
+    <div align="center" style="margin-top: 30px;">
+      <button onclick="showPhotos()" id="see-more" class="see">See More</button>
+    </div>
+    <br>
+    <br>
+    <div id="photos-section" class="container">
+      <div align="center">
+        <div class="row py-3 ">
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/7.png" height="180px">
+            <br><br>
+            <p><b>Apple MacBook Air Interl Core i5<br>3rd Gen 333OS<br>4Gb | 256 GB</b><br><b>1,00,000/-
+                Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple MacBook Air Interl Core i5 3rd Gen 333OS 4Gb | 256 GB" data-price="1,00,000/-"
+                  data-image="./images/Apple/7.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple MacBook Air Interl Core i5 3rd Gen 333OS 4Gb | 256 GB','1,00,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple MacBook Air Interl Core i5<br>3rd Gen 333OS<br>4Gb 256 GB</b>" data-price="100000"
+              data-images="./images/Apple/7.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/8.png" height="200px" width="280"><br>
+            <p><b>Aspire 3 intel Core i3<br> Gen 1115G4 - A315-58<br> 4GB | 256 GB</b><br><b>80,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Aspire 3 intel Core i3 Gen 1115G4 - A315-58 4GB | 256 GB" data-price="80,000/-"
+                  data-image="./images/Apple/8.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </b>
+            </p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Aspire 3 intel Core i3 Gen 1115G4 - A315-58 4GB | 256 GB','80,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Aspire 3 intel Core i3<br> Gen 1115G4 - A315-58<br> 4GB | 256 GB</b>" data-price="80000"
+              data-images="./images/Apple/8.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes" style="margin-top: -50px;">
+            <img src="./images/Apple/9.png" height="250px" width="280px"><br>
+            <p><b>MacBook pro 13-inch <br>2020 M1 (8GB | 512GB)<br>8-core GPS</b><br><b>95,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="MacBook pro 13-inch 2020 M1 (8GB | 512GB) 8-core GPS" data-price="95,000/-"
+                  data-image="./images/Apple/9.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('MacBook pro 13-inch 2020 M1 (8GB | 512GB) 8-core GPS','95,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>MacBook pro 13-inch <br>2020 M1 (8GB | 512GB)<br>8-core GPS</b>" data-price="95000"
+              data-images="./images/Apple/9.png">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <div align="center">
+        <div class="row">
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/10.png" height="250px" width="280px">
+            <br>
+            <p><b>Apple M4 chip 10-core CPU<br>4 performance core & 6 efficiency<br> core 120GB
+                memory</b><br><b>1,20,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple M4 chip 10-core CPU 4 performance core & 6 efficiency core 120GB memory"
+                  data-price="1,20,000/-" data-image="./images/Apple/10.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple M4 chip 10-core CPU 4 performance core & 6 efficiency core 120GB memory','1,20,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple M4 chip 10-core CPU<br>4 performance core & 6 efficiency core<br>120GB memory</b>"
+              data-price="120000" data-images="./images/Apple/10.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/11.png" height="250px" width="280px">
+            <br>
+            <p><b>Apple 2021 MacBook Pro <br>Apple M1 Pro-MKGQ3HN/A<br>14.2 inch, space
+                grey</b><br><b>90,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple 2021 MacBook Pro Apple M1 Pro-MKGQ3HN/A 14.2 inch, space grey" data-price="90,000/-"
+                  data-image="./images/Apple/11.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple 2021 MacBook Pro Apple M1 Pro-MKGQ3HN/A 4.2 inch, space grey','90,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple 2021 MacBook Pro <br>Apple M1 Pro-MKGQ3HN/A<br>14.2 inch, space grey</b>"
+              data-price="90000" data-images="./images/Apple/11.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/12.png" height="250px" width="280px"><br>
+            <p><b>Apple MacBook Pro M1 Max<br>Face time HD camera delivers <br> extraordinary performance
+              </b><br><b>85,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple MacBook Pro M1 Max Face time HD camera delivers extraordinary performance"
+                  data-price="85,000/-" data-image="./images/Apple/12.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple MacBook Pro M1 Max Face time HD camera delivers extraordinary performance','85,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple MacBook Pro M1 Max<br>Face time HD camera delivers <br> extraordinary performance </b>"
+              data-price="85000" data-images="./images/Apple/12.png">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <div align="center">
+        <div class="row">
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/13.png" height="250px" width="280px">
+            <br>
+            <p><b>MacBook Air superfast M4 chip<br>lightwight with all-day<br>battery life
+              </b><br><b>70,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="MacBook Air superfast M4 chip lightwight with all-day battery life" data-price="70,000/-"
+                  data-image="./images/Apple/13.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('MacBook Air superfast M4 chip lightwight with all-day battery life','70,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>MacBook Air superfast M4 chip<br>lightwight with all-day<br>battery life </b>"
+              data-price="70000" data-images="./images/Apple/13.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/14.png" height="250px" width="280px">
+            <br>
+            <p><b>2020 MacBook Air with M1 chip<br>8-core CPU, 7-core GPU<br>13.3 inch Retain Display
+              </b><br><b>85,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="2020 MacBook Air with M1 chip 8-core CPU, 7-core GPU 13.3 inch Retain Display"
+                  data-price="85,000/-" data-image="./images/Apple/14.png">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('2020 MacBook Air with M1 chip 8-core CPU, 7-core GPU 13.3 inch Retain Display','85,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>2020 MacBook Air with M1 chip<br>8-core CPU, 7-core GPU<br>13.3 inch Retain Display </b>"
+              data-price="85000" data-images="./images/Apple/14.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/15.png" height="250px" width="280px"><br>
+            <p><b>Apple M1 or M2 chip<br> long battery life Retina Display<br> 4GB | 256
+                GB</b><br><b>95,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple M1 or M2 chip long battery life Retina Display 4GB | 256 GB" data-price="95,000/-"
+                  data-image="./images/Apple/15.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple M1 or M2 chip long battery life Retina Display 4GB | 256 GB','95,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple M1 or M2 chip<br> long battery life Retina Display<br> 4GB | 256 GB</b>"
+              data-price="95000" data-images="./images/Apple/15.png">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <br>
+      <br>
+      <div align="center">
+        <div class="row">
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/16.png" height="250px" width="280px">
+            <br>
+            <p><b>Apple Silicon chips M1, M2<br>8GB RAM | 256GB SSD Storage<br>Backlit Keyboard, FacTime
+                HD</b><br><b>87,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple Silicon chips M1, M2 8GB RAM | 256GB SSD Storage Backlit Keyboard, FacTime HD"
+                  data-price="87,000/-" data-image="./images/Apple/16.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple Silicon chips M1, M2 8GB RAM | 256GB SSD Storage Backlit Keyboard, FacTime HD','87,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple Silicon chips M1, M2<br>8GB RAM | 256GB SSD Storage<br>Backlit Keyboard, FacTime HD</b>"
+              data-price="87000" data-images="./images/Apple/16.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/17.png" height="250px" width="280px">
+            <br>
+            <p><b>Apple MacBook Air(M1,2020)<br>13.3-inch Retina Display<br>8GB RAM | 256GB
+                SSD</b><br><b>91,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple MacBook Air(M1,2020) 13.3-inch Retina Display 8GB RAM | 256GB SSD"
+                  data-price="91,000/-" data-image="./images/Apple/17.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple MacBook Air(M1,2020) 13.3-inch Retina Display 8GB RAM | 256GB SSD','91,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple MacBook Air(M1,2020)<br>13.3-inch Retina Display<br>8GB RAM | 256GB SSD</b>"
+              data-price="91000" data-images="./images/Apple/17.png">Add to
+              Cart</button>
+          </div>
+
+          <div class="col-md-4" id="imgaes">
+            <img src="./images/Apple/18.png" height="250px" width="280px"><br>
+            <p><b>Apple A18 Pro Chip <br>16-core Neural Engine For AI Tasks<br>six-core CPU & five-core
+                GPU</b><br><b>89,000/- Rs
+                <button class="wishlist-btn add-to-wish"
+                  data-name="Apple A18 Pro Chip 16-core Neural Engine For AI Tasks six-core CPU & five-core GPU"
+                  data-price="89,000/-" data-image="./images/Apple/18.png">
+                  <i class="bi bi-heart"></i>
+                </button></b></p>
+            <button class="btn btn-primary" id="to"
+              onclick="buyNow('Apple A18 Pro Chip 16-core Neural Engine For AI Tasks six-core CPU & five-core GPU','89,000/-Rs')">Shop
+              Now</button>
+            <button class="btn btn-primary add-to-cart" id="to"
+              data-name="<b>Apple A18 Pro Chip <br>16-core Neural Engine For AI Tasks<br>six-core CPU & five-core GPU</b>"
+              data-price="89000" data-images="./images/Apple/18.png">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+      <div align="center" style="margin-top: 30px;">
+        <button class="see" onclick="hidePhotos()">See Less</button>
+      </div>
+    </div>
+
+
+  </section>
+
+   <!-- PAYMENT SECTION -->
+    <section id="paymentSection" class="hidden">
+        <h3>Order Now!</h3>
+        <div class="order-summary">
+            <p><b>Product:</b> <span id="pName"></span></p>
+            <p><b>Price:</b> <span id="pPrice"></span></p>
+        </div>
+        <h2>Select Payment Option</h2>
+        <div class="payment-options">
+            <button onclick="toggleCODForm()">Cash on Delivery</button>
+            <button onclick="showOnline()">Cash on Online</button>
+        </div>
+        <!-- COD Form -->
+        <form id="codForm" onsubmit="submitCOD(event)" class="hidden">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Address" required>
+            <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}">
+            <input type="text" placeholder="State" required>
+            <input type="text" placeholder="City" required>
+            <input type="number" placeholder="Pin Code" required><br>
+            <button type="submit">Place Order</button>
+        </form>
+        <!-- Online Payment -->
+        <div id="onlinePayment" class="hidden">
+            <h3>Choose Online Payment Method</h3>
+            <div class="online-options">
+                <button onclick="openCheckout('PhonePe')">PhonePe</button>
+                <button onclick="openCheckout('Google Pay')">Google Pay</button>
+                <button onclick="openCheckout('Paytm')">Paytm</button>
+                <button onclick="openCheckout('PayPal')">PayPal</button>
+            </div>
+        </div>
+        <!-- Checkout + PIN + Success -->
+        <div id="checkoutScreen" class="checkout-screen">
+            <h3 id="checkoutTitle">Checkout</h3>
+            <p>Amount: <b><span id="checkoutAmount">₹0</span></b></p>
+            <button class="btn btn-primary" onclick="goToPinScreen()">Pay</button>
+        </div>
+        <div id="pinScreen" class="pin-screen">
+            <h3 id="pinTitle">Enter PIN</h3>
+            <input type="password" id="upiPin" placeholder="****" maxlength="6" required>
+            <button class="btn btn-primary" onclick="completePayment()">Submit</button>
+        </div>
+        <div id="successScreen" class="success-screen">
+            <p class="success">✅ Payment Successful!</p>
+            <p>Your order has been placed.</p>
+            <button class="btn btn-primary" onclick="backToProducts()">Back to Products</button>
+        </div>
+    </section>
+
+    
+<script>
+   let currentMethod = "";
+        let selectedProduct = {};
+
+        function buyNow(name, price) {
+            selectedProduct = { name, price };
+            document.getElementById("pName").innerText = name;
+            document.getElementById("pPrice").innerText = price;
+            document.getElementById("checkoutAmount").innerText = price;
+
+            document.getElementById("productSection").classList.add("hidden");
+            document.getElementById("paymentSection").classList.remove("hidden");
+            document.querySelector("nav.navbar").classList.add("hidden");
+            document.querySelector("section.footer").classList.add("hidden");
+            document.getElementById("see-more").classList.add("hidden");
+            document.getElementById("title").classList.add("hidden");
+            document.getElementById("productSection1").classList.add("hidden");
+
+
+
+        }
+
+        function toggleCODForm() {
+            document.getElementById("codForm").classList.toggle("hidden");
+        }
+
+        function showOnline() {
+            document.getElementById("onlinePayment").classList.toggle("hidden");
+        }
+
+        function submitCOD(event) {
+            event.preventDefault();
+            alert("Order placed successfully with Cash on Delivery!");
+            backToProducts();
+        }
+
+        function openCheckout(method) {
+            currentMethod = method;
+            document.getElementById("checkoutTitle").innerText = method + " Checkout";
+            document.getElementById("checkoutAmount").innerText = selectedProduct.price;
+            document.getElementById("checkoutScreen").style.display = "block";
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "none";
+        }
+
+        function goToPinScreen() {
+            document.getElementById("checkoutScreen").style.display = "none";
+            document.getElementById("pinTitle").innerText = "Enter " + currentMethod + " PIN";
+            document.getElementById("pinScreen").style.display = "block";
+        }
+
+        function completePayment() {
+            let pin = document.getElementById("upiPin").value;
+            if (pin.length < 4) {
+                alert("Please enter valid PIN");
+                return;
+            }
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "block";
+            document.getElementById("upiPin").value = "";
+        }
+
+        function backToProducts() {
+            // document.getElementById("paymentSection").classList.add("hidden");
+            // document.getElementById("productSection").classList.remove("hidden");
+            // document.getElementById("codForm").classList.add("hidden");
+            // document.getElementById("onlinePayment").classList.add("hidden");
+            // document.getElementById("checkoutScreen").style.display = "none";
+            // document.getElementById("pinScreen").style.display = "none";
+            // document.getElementById("successScreen").style.display = "none";
+                  window.location.href = "index.html";
+
+        }
+
+
+</script>
+
+
+
+
+  <script>
+
+    function showPhotos() {
+      document.getElementById("photos-section").style.display = "block";
+      document.getElementById("see-more").style.display = "none";
+    }
+
+    function hidePhotos() {
+      document.getElementById("photos-section").style.display = "none";
+      document.getElementById("see-more").style.display = "inline-block";
+    }
+
+
+
+
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cart.length;
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.getAttribute('data-name'),
+          price: button.getAttribute('data-price'),
+          img: button.getAttribute('data-images')
+        };
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartCountElement.textContent = cart.length;
+        //alert(item.name + " added to cart!");
+      });
+    });
+
+
+    function msg(event) {
+      event.preventDefault();
+      alert("form submited Sucessfully!")
+      window.location.reload();
+
+    }
+  </script>
+
+  <script>
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const wishlistCountElement = document.getElementById('wishlist-count');
+    wishlistCountElement.textContent = wishlist.length;
+
+    document.querySelectorAll('.add-to-wish').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.getAttribute('data-name'),
+          price: button.getAttribute('data-price'),
+          img: button.getAttribute('data-image')
+        };
+        wishlist.push(item);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        wishlistCountElement.textContent = wishlist.length;
+      });
+    });
+
+
+
+
+    
+  </script>
+
+
+  <section class="footer container py-4 mt-5" style="background-color: lightgray; ">
+    <div class="row">
+      <div class="col-md-3">
+        <p style="font-size: 35px;">Shop Non-Stop on <b>Laptop Wolrd</b></p>
+        <p>Trusted by crores of Indians<br>Cash on Delivery | Free Delivery</p>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./images/gfooter.png" width="150px">
+          </div>
+          <div class="col-md-6">
+            <img src="./images/app.png" width="150px">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <ul>
+          <a href="./career.html">
+            <li>Careers</li>
+          </a><br>
+          <a href="./bs.html">
+            <li>Become a supplier</li>
+          </a><br>
+          <a href="./faq.html">
+            <li>FAQ'S</li>
+          </a><br>
+          <a href="#contact">
+            <li>Sitemap</li>
+          </a><br>
+        </ul>
+      </div>
+
+      <div class="col-md-2">
+        <ul>
+          <a href="./privacy.html">
+            <li>Privacy Policy</li>
+          </a> <br>
+
+          <a href="./notice.html">
+            <li>Notices and Returns</li><br>
+          </a>
+        </ul>
+      </div>
+
+      <!-- Reach Out Section -->
+      <div class="col-md-2 text-center">
+        <div style="font-size: 25px;">
+          <b>Reach Out to Us</b>
+        </div>
+        <div class="d-flex justify-content-center gap-2 mt-2">
+          <a href="https://www.facebook.com/p/Laptop-SPACE-100063985306507/" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/fluency/30/facebook-new.png" alt="facebook-new" />
+          </a>
+          <a href="https://www.instagram.com/laptop_space/?hl=en" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/30/youtube-play.png" alt="youtube-play" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/30/linkedin.png" alt="linkedin" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1" />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 pr-3 ">
+        <p style="font-size: 25px;"><b>Contact Us</b></p>
+        <p style="font-size: 15px;">
+          Laptop Space in Satara has <br>
+          Two Listed Location:<br>
+          (1) Upper Ground Floor,Shop<br>
+          No 16,Shahu Stadium, Sadar<br>
+          Bazar Satara, 4150002<br><br>
+          (2) Shahu Stadium, B1-Shop No-1<br>
+          Adarsh Corner Appartment, Opposite<br>
+          Rajtara Hotel,Radhika Road,Satara,<br>
+          4150002
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

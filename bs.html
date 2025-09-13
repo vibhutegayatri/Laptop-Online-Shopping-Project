@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Become a Supplier — Laptop Space</title>
+  <style>
+    :root{--accent:#0b5ed7;--muted:#6b7280;--bg:#f7fafc}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.45;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:980px;margin:36px auto;padding:28px;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.08)}
+    header{display:flex;align-items:center;gap:18px}
+    .brand{font-weight:700;font-size:20px;color:var(--accent)}
+    h1{margin:8px 0 6px;font-size:24px}
+    p.lead{margin:0;color:var(--muted)}
+    form{margin-top:20px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .full{grid-column:1/-1}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#0f172a}
+    input[type=text],input[type=email],input[type=tel],select,textarea,input[type=file]{width:100%;padding:10px 12px;border:1px solid #e6e9ee;border-radius:8px;font-size:14px}
+    textarea{min-height:110px;resize:vertical}
+    .hint{font-size:12px;color:var(--muted);margin-top:6px}
+    .actions{display:flex;gap:12px;align-items:center;margin-top:18px}
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid #e6e9ee;color:var(--muted)}
+    .checkbox{display:flex;gap:8px;align-items:flex-start}
+    .small{font-size:13px;color:var(--muted)}
+    .success{display:none;padding:14px;border-radius:8px;background:#ecfdf5;color:#065f46;margin-top:14px}
+    .footer-note{font-size:13px;color:var(--muted);margin-top:12px}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+<img src="./images/laptopspace.png" height="60px" width="75px">      <div>
+        <div class="brand">Laptop Space</div>
+        <div style="font-size:12px;color:var(--muted)">Supplier Onboarding</div>
+      </div>
+    </header>
+
+    <h1>Become a Supplier</h1>
+    <p class="lead">Join Laptop Space as a trusted supplier. Fill the form below and our partnerships team will review your application within 3-5 business days.</p>
+
+    <form id="supplierForm" novalidate>
+      <div class="grid">
+        <div>
+          <label for="companyName">Company / Brand Name *</label>
+          <input id="companyName" name="companyName" type="text" required placeholder="e.g. Stellar Electronics Pvt Ltd">
+        </div>
+
+        <div>
+          <label for="contactName">Contact Person *</label>
+          <input id="contactName" name="contactName" type="text" required placeholder="e.g. Asha Sharma">
+        </div>
+
+        <div>
+          <label for="email">Business Email *</label>
+          <input id="email" name="email" type="email" required placeholder="contact@company.com">
+        </div>
+
+        <div>
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" type="tel" required placeholder="+91 98xxxxxxx">
+        </div>
+
+        <div class="full">
+          <label for="address">Registered Address *</label>
+          <input id="address" name="address" type="text" required placeholder="Street, City, State, Pincode">
+        </div>
+
+        <div>
+          <label for="gst">GSTIN / Tax ID</label>
+          <input id="gst" name="gst" type="text" placeholder="12ABCDE1234F1Z5">
+        </div>
+
+        <div>
+          <label for="category">Product Categories *</label>
+          <select id="category" name="category" required multiple size="4">
+            <option value="laptops">Laptops</option>
+            <option value="accessories">Accessories (Chargers, Bags, Mice)</option>
+            <option value="components">Components (RAM, SSD)</option>
+            <option value="peripherals">Peripherals (Monitors, Keyboards)</option>
+          </select>
+          <div class="hint">Hold Ctrl (Windows) / Cmd (Mac) to select multiple categories.</div>
+        </div>
+
+        <div>
+          <label for="minOrder">Minimum Order Value</label>
+          <input id="minOrder" name="minOrder" type="text" placeholder="e.g. ₹10,000 or NA">
+        </div>
+
+        <div class="full">
+          <label for="catalog">Product Catalog / Price List (PDF or Excel)</label>
+          <input id="catalog" name="catalog" type="file" accept=".pdf,.xls,.xlsx,.csv">
+          <div class="hint">Optional — upload your latest catalog or a sample CSV of products.</div>
+        </div>
+
+        <div class="full">
+          <label for="bank">Bank / Payment Details</label>
+          <input id="bank" name="bank" type="text" placeholder="Bank name, A/c name, A/c number, IFSC">
+        </div>
+
+        <div class="full">
+          <label for="notes">Other Notes (lead times, MOQ, certifications)</label>
+          <textarea id="notes" name="notes" placeholder="Write any additional information that helps us evaluate your products"></textarea>
+        </div>
+
+        <div class="full">
+          <label>Terms & Compliance *</label>
+          <div class="checkbox">
+            <input id="agree" name="agree" type="checkbox" required style="margin-top:4px">
+            <div>
+              <label for="agree" class="small">I confirm that the information provided is accurate and I agree to Laptop Space's supplier terms and verification checks.</label>
+              <div class="hint">We may request KYC documents and run standard supplier verification.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn">Submit Application</button>
+        <button type="button" class="btn ghost" id="saveDraft">Save as Draft</button>
+        <div style="margin-left:auto" class="small">Questions? Email <a href="mailto:partners@laptopspace.example">laptopspace@hotmail.com</a></div>
+      </div>
+
+      <div id="success" class="success" role="status">Thank you — your supplier application has been received. Our team will contact you at the email you provided.</div>
+
+      <div class="footer-note">By submitting, you authorize Laptop Space to contact you and to store the submitted information for onboarding purposes. We respect your privacy — supplier information will only be used for legitimate business purposes.</div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('supplierForm');
+    const success = document.getElementById('success');
+    const saveDraft = document.getElementById('saveDraft');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Simulated submission: collect values and log (replace with real API call)
+      const data = new FormData(form);
+      const obj = {};
+      for (const [k,v] of data.entries()){
+        obj[k]=v;
+      }
+      console.log('Supplier application payload:', obj);
+
+      success.style.display='block';
+      // clear form after submit (optional)
+      // form.reset();
+
+      // In production, replace above console.log with fetch() to your backend endpoint.
+    });
+
+    saveDraft.addEventListener('click', ()=>{
+      // local draft save (simple)
+      const data = new FormData(form);
+      const draft = {};
+      for (const [k,v] of data.entries()){ draft[k]=v }
+      localStorage.setItem('supplierDraft', JSON.stringify(draft));
+      alert('Draft saved locally in your browser.');
+    });
+
+    // populate draft if exists
+    window.addEventListener('load', ()=>{
+      try{
+        const draft = JSON.parse(localStorage.getItem('supplierDraft')||'null');
+        if(draft){
+          for(const k in draft){
+            const el = document.getElementsByName(k)[0];
+            if(!el) continue;
+            if(el.type==='file') continue;
+            el.value = draft[k];
+          }
+        }
+      }catch(e){console.warn(e)}
+    });
+  </script>
+</body>
+</html>

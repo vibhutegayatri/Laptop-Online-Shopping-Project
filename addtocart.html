@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <style>
+    .mb-4,.total{
+       padding-top: 20px;
+    text-align: center;
+    font-family: cursive;
+    color: rgb(220, 81, 104);
+    text-shadow: 2px 8px 10px pink;
+    font-size: 45px;
+    }
+
+    .see {
+    font-size: 18px;
+    
+    font-family: cursive;
+    color: white;
+    background-color: rgb(220, 81, 104);
+    /* text-shadow: 2px 8px 10px pink; */
+    border: none;
+    /* Remove default border */
+    padding: 12px 30px;
+    /* Space inside button */
+
+    border-radius: 50px;
+    /* Rounded capsule shape */
+    cursor: pointer;
+    /* Pointer cursor */
+    /* font-weight: bold; */
+    transition: tranform 0.3s ease;
+
+}
+
+.see:hover {
+    transform: scale(1.1);
+}
+
+.mt-4{
+  text-align: center;
+}
+  </style>
+</head>
+<body class="p-4 bg-light">
+
+  <h2 class="mb-4">Add to Cart</h2>
+  <a href="index.html" class="see">⬅ Continue Shopping</a><br><br>
+  <div style="text-align: center;">
+      <div class="row g-4" id="cart-items"></div>
+      </div>
+
+
+  <div class="mt-4">
+    <h4 class="total">Total: Rs. <span id="total">0</span></h4><br>
+    <button class="see" onclick="clearCart()">Clear Cart</button>
+     <button class="see" onclick="checkout()">Shop Now</button>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItems = document.getElementById('cart-items');
+    const totalElement = document.getElementById('total');
+
+    function displayCart() {
+      cartItems.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = "<p><b>Your cart is empty.</b></p>";
+        totalElement.textContent = "0";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        total += parseFloat(item.price);
+
+        let col = document.createElement("div");
+        col.className = "col-md-3";
+
+        col.innerHTML = `
+          <div class="card h-100">
+            <img src="${item.img}" class="card-img-top" alt="${item.name}" height="300" width="100">
+            <div class="card-body text-center">
+              <h5 class="card-title">${item.name}</h5>
+            <b>  <p class="card-text">Price: Rs ${item.price} /-</p></b>
+              <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Remove</button>
+            </div>
+          </div>
+        `;
+        cartItems.appendChild(col);
+      });
+
+      totalElement.textContent = total;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart();
+    }
+
+    displayCart();
+
+    
+     function checkout() {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  // Save cart + total into localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+  const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
+  localStorage.setItem("total", total);
+
+  // Redirect to payment page
+  window.location.href = "page.html"; // ✅ your checkout file
+}
+
+
+
+  </script>
+</body>
+</html>

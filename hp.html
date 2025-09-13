@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/laptop1.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-4 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/laptop.png" height="50" alt="Logo"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contactus">Contact Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Brand
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./apple.html">Apple</a></li>
+                <li><a class="dropdown-item" href="./asus.html">Asus</a></li>
+                <li><a class="dropdown-item" href="./dell.html">Dell</a></li>
+                <li><a class="dropdown-item" href="./hp.html">HP</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center flex-wrap">
+            <a href="./addtocart.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="fa-solid fa-cart-shopping navbar-icon text-white"></i>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <a href="wishlist.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="bi bi-heart-fill navbar-icon text-white"></i>
+              <span id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="font-size: 40px;">
+                <i class="bi bi-person-fill navbar-icon text-white"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                            <li><a class="dropdown-item" href="./reg.html">Register</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="d-flex mt-2 mt-lg-0 ms-lg-3">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="height: 35px; margin-top: 10px;">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+ <script>
+      function logout(){
+        window.location.href="https://www.google.com/"
+      }
+    </script>
+
+  <!-- images -->
+
+   <h1 id="title">HP Companye's Laptop</h1>
+
+
+    <section class="header container" id="productSection">
+        <br>
+
+        <div align="center">
+            <div class="row ">
+                <div class="col-md-4" id="imgaes">
+                    <img src="./images/hp/1.jpg" height="300px">
+                    <br>
+                    <p><b>HP 14 Chromebook intel N4120<br>16GB RAM | 192GB SSD storage <br>HD Thin and Light
+                            Laptop</b><br><b>80,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                        data-name="HP 14 Chromebook intel N4120 16GB RAM | 192GB SSD storage HD Thin and Light Laptop"
+                                        data-price="80,000/-"
+                                        data-image="./images/hp/1.jpg">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                            </b></p>
+                    <button class="btn btn-primary" id="to"
+                        onclick="buyNow('HP 14 Chromebook intel N4120 16GB RAM | 192GB SSD storage HD Thin and Light Laptop','80,000/-Rs')">Shop
+                        Now</button>
+                    <button class="btn btn-primary add-to-cart" id="to"
+                        data-name="<b>HP 14 Chromebook intel N4120<br>16GB RAM | 192GB SSD storage <br>HD Thin and Light Laptop</b>"
+                        data-price="80000" data-images="./images/hp/1.jpg">Add to Cart</button>
+                </div>
+
+                <div class="col-md-4" id="imgaes" style="margin-top: 40px;">
+                    <img src="./images/hp/2.jpg" height="250px"><br>
+                    <p><b>HP OmniBook 5 13th Gen<br>Intel Core i5-1334U Processer<br>16GB RAM | 512GB
+                            SSD</b><br><b>75,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                        data-name="HP OmniBook 5 13th Gen Intel Core i5-1334U Processer 16GB RAM | 512GB SSD"
+                                        data-price="75,000/-"
+                                        data-image="./images/hp/2.jpg">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                            </b></p>
+                    <button class="btn btn-primary" id="to"
+                        onclick="buyNow('HP OmniBook 5 13th Gen Intel Core i5-1334U Processer 16GB RAM | 512GB SSD','75,000/-Rs')">Shop
+                        Now</button>
+                    <button class="btn btn-primary add-to-cart" id="to"
+                        data-name="<b>HP OmniBook 5 13th Gen<br>Intel Core i5-1334U Processer<br>16GB RAM | 512GB SSD</b>"
+                        data-price="75000" data-images="./images/hp/2.jpg">Add to Cart</button>
+                </div>
+
+                <div class="col-md-4" style="margin-top: 60px;">
+                    <img src="./images/hp/3.jpg" height="185px">
+                    <br><br><br>
+                    <p><b>HP Pavilion Laptop 15 13 Gen <br> Intel Core i5-1335U 8GB RAM<br>256GB SSD | captivating
+                            visuals</b><br><b>68,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Pavilion Laptop 15 13 Gen  Intel Core i5-1335U 8GB RAM 256GB SSD | captivating visuals"
+                                        data-price="68,000/-"
+                                        data-image="./images/hp/3.jpg">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                            </b></p>
+                    <button class="btn btn-primary" id="to"
+                        onclick="buyNow('HP Pavilion Laptop 15 13 Gen  Intel Core i5-1335U 8GB RAM 256GB SSD | captivating visuals','68,000/-Rs')">Shop
+                        Now</button>
+                    <button class="btn btn-primary add-to-cart" id="to"
+                        data-name="<b>HP Pavilion Laptop 15 13 Gen <br> Intel Core i5-1335U 8GB RAM<br>256GB SSD | captivating visuals</b>"
+                        data-price="68000" data-images="./images/hp/3.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes" style="margin-top: 30px;">
+                        <img src="./images/hp/4.jpg" height="250px" width="300px">
+                        <br>
+                        <p><b>HP ZBook Ultra G1a 14<br>Ayxen AI Maz + PRO 395-64GB<br> 63.99GB RAM | 1 TB
+                            </b><br><b>77,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                        data-name="HP ZBook Ultra G1a 14 Ayxen AI Maz + PRO 395-64GB  63.99GB RAM | 1 TB"
+                                        data-price="77,000/-"
+                                        data-image="./images/hp/4.jpg">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                            </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP ZBook Ultra G1a 14 Ayxen AI Maz + PRO 395-64GB  63.99GB RAM | 1 TB ','77,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP ZBook Ultra G1a 14<br>Ayxen AI Maz + PRO 395-64GB<br> 63.99GB RAM | 1 TB </b>"
+                            data-price="77000" data-images="./images/hp/4.jpg">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/5.png" height="280px">
+                        <br>
+                        <p><b>HP Pavilion 15.6 HD Laptop<br>Intel pentium processor| 8GB RAM <br>High-definition
+                                Display</b><br><b>61,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Pavilion 15.6 HD Laptop Intel pentium processor| 8GB RAM High-definition Display"
+                                        data-price="61,000/-"
+                                        data-image="./images/hp/5.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Pavilion 15.6 HD Laptop Intel pentium processor| 8GB RAM High-definition Display','61,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Pavilion 15.6 HD Laptop<br>Intel pentium processor| 8GB RAM <br>High-definition Display</b>"
+                            data-price="61000" data-images="./images/hp/5.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes" style="margin-top:20px;">
+                        <img src="./images/hp/6.png" height="250px" width="280px"><br>
+                        <p style="margin-top:30px;"><b>HP Buisness Laptop AMD processor <br> 4GB RAM | 500GB
+                                SSD</b><br><b>55,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Buisness Laptop AMD processor 4GB RAM | 500GB SSD"
+                                        data-price="55,000/-"
+                                        data-image="./images/hp/6.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Buisness Laptop AMD processor 4GB RAM | 500GB SSD','55,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Buisness Laptop AMD processor <br> 4GB RAM | 500GB SSD</b>"
+                            data-price="55000" data-images="./images/hp/6.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- see more photos -->
+    <section id="productSection1">
+        <div align="center" style="margin-top: 30px;">
+            <button onclick="showPhotos()" id="see-more" class="see">See More</button>
+        </div>
+        <br>
+        <br>
+        <div id="photos-section" class="container">
+            <div align="center">
+                <div class="row py-3 ">
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/7.png" height="180px">
+                        <br><br>
+                        <p><b>HP OmniBook X fip<br>Intel Core Ultra 5-226V<br>16GB RAM | 512GB SSD</b><br><b>73,000/-
+                                Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP OmniBook X fip Intel Core Ultra 5-226V 16GB RAM | 512GB SSD"
+                                        data-price="73,000/-"
+                                        data-image="./images/hp/7.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                            </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP OmniBook X fip Intel Core Ultra 5-226V 16GB RAM | 512GB SSD','73,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP OmniBook X fip<br>Intel Core Ultra 5-226V<br>16GB RAM | 512GB SSD</b>"
+                            data-price="73000" data-images="./images/hp/7.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/8.png" height="200px"><br>
+                        <p><b>HP Envy x360 AMD Ryzen 5<br>8GB RAM | 512GB SSD<br>Touchscrren, FHD Laptop,Redeon
+                                Graphics</b><br><b>69,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Envy x360 AMD Ryzen 5 8GB RAM | 512GB SSD Touchscrren, FHD Laptop,Redeon Graphics"
+                                        data-price="69,000/-"
+                                        data-image="./images/hp/8.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Envy x360 AMD Ryzen 5 8GB RAM | 512GB SSD Touchscrren, FHD Laptop,Redeon Graphics','69,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Envy x360 AMD Ryzen 5<br>8GB RAM | 512GB SSD<br>Touchscrren, FHD Laptop,Redeon Graphics</b>"
+                            data-price="69,000" data-images="./images/hp/8.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/9.png" height="200px"><br>
+                        <p><b>HP OmniBook X laptop<br>16GB RAM | 1TB SSD | Touch Display<br>Next Gen
+                                Windows</b><br><b>64,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP OmniBook X laptop 16GB RAM | 1TB SSD | Touch Display Next Gen Windows"
+                                        data-price="64,000/-"
+                                        data-image="./images/hp/9.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP OmniBook X laptop 16GB RAM | 1TB SSD | Touch Display Next Gen Windows','64,000/-Rs')">Shop
+                            Now</button>R
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP OmniBook X laptop<br>16GB RAM | 1TB SSD | Touch Display<br>Next Gen Windows</b>"
+                            data-price="64,000" data-images="./images/hp/9.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/10.png" height="300px">
+                        <br>
+                        <p><b>HP Envy X360 11th Gen<br>Intel Core i7 13.3 inches Fhd<br>16GB RAM | 512GB
+                                SSD</b><br><b>76,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Envy X360 11th Gen Intel Core i7 13.3 inches Fhd 16GB RAM | 512GB SSD"
+                                        data-price="76,000/-"
+                                        data-image="./images/hp/10.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Envy X360 11th Gen Intel Core i7 13.3 inches Fhd 16GB RAM | 512GB SSD','76,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Envy X360 11th Gen<br>Intel Core i7 13.3 inches Fhd<br>16GB RAM | 512GB SSD</b>"
+                            data-price="76000" data-images="./images/hp/10.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/11.png" height="300px">
+                        <br>
+                        <p><b>HP Envy X360 , AMD Ryzen 5<br>8GB RAM | 512GB SSD<br>Touchscrren,15.6 inch, FHC Laptop
+                            </b><br><b>55,000/- Rs
+                                <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Envy X360 , AMD Ryzen 5 8GB RAM | 512GB SSD Touchscrren,15.6 inch, FHC Laptop"
+                                        data-price="55,000/-"
+                                        data-image="./images/hp/11.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                            </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Envy X360 , AMD Ryzen 5 8GB RAM | 512GB SSD Touchscrren,15.6 inch, FHC Laptop','55,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="HP Envy X360 , AMD Ryzen 5<br>8GB RAM | 512GB SSD<br>Touchscrren,15.6 inch, FHC Laptop </b>"
+                            data-price="55000" data-images="./images/hp/11.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes" style="margin-top: 90px;">
+                        <img src="./images/hp/12.png" height="180px"><br>
+                        <p style="margin-top: 30px;"><b>2018 Newest Premium HP high<br>performance laptop | 4GB
+                                RAM<br>500GB SSD |AMD E2-9000e</b><br><b>63,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="2018 Newest Premium HP high performance laptop | 4GB RAM 500GB SSD |AMD E2-9000e"
+                                        data-price="63,000/-"
+                                        data-image="./images/hp/12.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('2018 Newest Premium HP high<br>performance laptop | 4GB RAM<br>500GB SSD |AMD E2-9000e','63,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="><b>2018 Newest Premium HP high<br>performance laptop | 4GB RAM<br>500GB SSD |AMD E2-9000e</b>"
+                            data-price="63000" data-images="./images/hp/12.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/13.png" height="200px">
+                        <br>
+                        <p><b>HP Evny Cor i5 8th Gen<br>8GB RAM | 128GB SSD | 13.3 inch FHD <br>Intel Trubo Boost
+                                Technology</b><br><b>57,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Evny Cor i5 8th Gen 8GB RAM | 128GB SSD | 13.3 inch FHD Intel Trubo Boost Technology"
+                                        data-price="57,000/-"
+                                        data-image="./images/hp/13.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Evny Cor i5 8th Gen 8GB RAM | 128GB SSD | 13.3 inch FHD Intel Trubo Boost Technology','57,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Evny Cor i5 8th Gen<br>8GB RAM | 128GB SSD | 13.3 inch FHD <br>Intel Trubo Boost Technology</b>"
+                            data-price="57000" data-images="./images/hp/13.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/14.png" height="200px">
+                        <br>
+                        <p><b>HP ENvy X360 Convertible 2-in-1<br>Laptop, Stylus Pen, BoxWave<br>12GB RAM | 512GB
+                                SSD</b><br><b>70,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP ENvy X360 Convertible 2-in-1 Laptop, Stylus Pen, BoxWave 12GB RAM | 512GB SSD"
+                                        data-price="70,000/-"
+                                        data-image="./images/hp/14.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP ENvy X360 Convertible 2-in-1 Laptop, Stylus Pen, BoxWave 12GB RAM | 512GB SSD','70,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP ENvy X360 Convertible 2-in-1<br>Laptop, Stylus Pen, BoxWave<br>12GB RAM | 512GB SSD</b>"
+                            data-price="70000" data-images="./images/hp/14.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/15.png" height="200px"><br>
+                        <p><b>HP Envy X36014 2 in 1 laptop<br>Intel Cor Ultra 7-155U<br>16GB RAM | 512GB SSD | Intel
+                                Arc</b><br><b>66,500/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Envy X36014 2 in 1 laptop Intel Cor Ultra 7-155U 16GB RAM | 512GB SSD | Intel Arc"
+                                        data-price="66,500/-"
+                                        data-image="./images/hp/15.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Envy X36014 2 in 1 laptop Intel Cor Ultra 7-155U 16GB RAM | 512GB SSD | Intel Arc','66,500/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Envy X36014 2 in 1 laptop<br>Intel Cor Ultra 7-155U<br>16GB RAM | 512GB SSD | Intel Arc</b>"
+                            data-price="66500" data-images="./images/hp/15.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <div align="center">
+                <div class="row">
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/16.png" height="200px">
+                        <br>
+                        <p><b>HP 15, 13th GN Intel Core i7<br>16GB RAM | 512GB SSD<br>FHD Camera | Micro-Edge |
+                                Anto-Glare</b><br><b>57,500/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP 15, 13th GN Intel Core i7 16GB RAM | 512GB SSD FHD Camera | Micro-Edge | Anto-Glare"
+                                        data-price="57,500/-"
+                                        data-image="./images/hp/16.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP 15, 13th GN Intel Core i7 16GB RAM | 512GB SSD FHD Camera | Micro-Edge | Anto-Glare','57,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP 15, 13th GN Intel Core i7<br>16GB RAM | 512GB SSD<br>FHD Camera | Micro-Edge | Anto-Glare</b>"
+                            data-price="57500" data-images="./images/hp/16.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/17.png" height="200px">
+                        <br>
+                        <p><b>HP Envy Laptop 17.3 IPS<br> Intel Core i7 | 64GB RAM<br>Touchscrren, Fingerprint Reader,
+                                Window 11</b><br><b>71,500/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Envy Laptop 17.3 IPS Intel Core i7 | 64GB RAM Touchscrren, Fingerprint Reader, Window 11"
+                                        data-price="71,500/-"
+                                        data-image="./images/hp/17.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Envy Laptop 17.3 IPS Intel Core i7 | 64GB RAM Touchscrren, Fingerprint Reader, Window 11','71,500/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Envy Laptop 17.3 IPS<br> Intel Core i7 | 64GB RAM<br>Touchscrren, Fingerprint Reader, Window 11</b>"
+                            data-price="71500" data-images="./images/hp/17.png">Add to Cart</button>
+                    </div>
+
+                    <div class="col-md-4" id="imgaes">
+                        <img src="./images/hp/18.png" height="200px"><br>
+                        <p><b>HP Envy X360 13th Gen<br>Intel Core i5-1335U | 16GB DDRSS<br>512GB SSD | 5MP IR
+                                camera</b><br><b>55,000/- Rs
+                                    <button class="wishlist-btn add-to-wish"
+                                        data-name="HP Envy X360 13th Gen Intel Core i5-1335U | 16GB DDRSS 512GB SSD | 5MP IR camera"
+                                        data-price="55,000/-"
+                                        data-image="./images/hp/18.png">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </b></p>
+                        <button class="btn btn-primary" id="to"
+                            onclick="buyNow('HP Envy X360 13th Gen Intel Core i5-1335U | 16GB DDRSS 512GB SSD | 5MP IR camera','55,000/-Rs')">Shop
+                            Now</button>
+                        <button class="btn btn-primary add-to-cart" id="to"
+                            data-name="<b>HP Envy X360 13th Gen<br>Intel Core i5-1335U | 16GB DDRSS<br>512GB SSD | 5MP IR camera</b>"
+                            data-price="55000" data-images="./images/hp/18.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div align="center" style="margin-top: 30px;">
+                <button class="see" onclick="hidePhotos()">See Less</button>
+            </div>
+        </div>
+
+
+    </section>
+ <!-- PAYMENT SECTION -->
+    <section id="paymentSection" class="hidden">
+        <h3>Order Now!</h3>
+        <div class="order-summary">
+            <p><b>Product:</b> <span id="pName"></span></p>
+            <p><b>Price:</b> <span id="pPrice"></span></p>
+        </div>
+        <h2>Select Payment Option</h2>
+        <div class="payment-options">
+            <button onclick="toggleCODForm()">Cash on Delivery</button>
+            <button onclick="showOnline()">Cash on Online</button>
+        </div>
+        <!-- COD Form -->
+        <form id="codForm" onsubmit="submitCOD(event)" class="hidden">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Address" required>
+            <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}">
+            <input type="text" placeholder="State" required>
+            <input type="text" placeholder="City" required>
+            <input type="number" placeholder="Pin Code" required><br>
+            <button type="submit">Place Order</button>
+        </form>
+        <!-- Online Payment -->
+        <div id="onlinePayment" class="hidden">
+            <h3>Choose Online Payment Method</h3>
+            <div class="online-options">
+                <button onclick="openCheckout('PhonePe')">PhonePe</button>
+                <button onclick="openCheckout('Google Pay')">Google Pay</button>
+                <button onclick="openCheckout('Paytm')">Paytm</button>
+                <button onclick="openCheckout('PayPal')">PayPal</button>
+            </div>
+        </div>
+        <!-- Checkout + PIN + Success -->
+        <div id="checkoutScreen" class="checkout-screen">
+            <h3 id="checkoutTitle">Checkout</h3>
+            <p>Amount: <b><span id="checkoutAmount">₹0</span></b></p>
+            <button class="btn btn-primary" onclick="goToPinScreen()">Pay</button>
+        </div>
+        <div id="pinScreen" class="pin-screen">
+            <h3 id="pinTitle">Enter PIN</h3>
+            <input type="password" id="upiPin" placeholder="****" maxlength="6" required>
+            <button class="btn btn-primary" onclick="completePayment()">Submit</button>
+        </div>
+        <div id="successScreen" class="success-screen">
+            <p class="success">✅ Payment Successful!</p>
+            <p>Your order has been placed.</p>
+            <button class="btn btn-primary" onclick="backToProducts()">Back to Products</button>
+        </div>
+    </section>
+
+    
+<script>
+   let currentMethod = "";
+        let selectedProduct = {};
+
+        function buyNow(name, price) {
+            selectedProduct = { name, price };
+            document.getElementById("pName").innerText = name;
+            document.getElementById("pPrice").innerText = price;
+            document.getElementById("checkoutAmount").innerText = price;
+
+            document.getElementById("productSection").classList.add("hidden");
+            document.getElementById("paymentSection").classList.remove("hidden");
+            document.querySelector("nav.navbar").classList.add("hidden");
+            document.querySelector("section.footer").classList.add("hidden");
+            document.getElementById("see-more").classList.add("hidden");
+            document.getElementById("title").classList.add("hidden");
+            document.getElementById("productSection1").classList.add("hidden");
+
+
+
+        }
+
+        function toggleCODForm() {
+            document.getElementById("codForm").classList.toggle("hidden");
+        }
+
+        function showOnline() {
+            document.getElementById("onlinePayment").classList.toggle("hidden");
+        }
+
+        function submitCOD(event) {
+            event.preventDefault();
+            alert("Order placed successfully with Cash on Delivery!");
+            backToProducts();
+        }
+
+        function openCheckout(method) {
+            currentMethod = method;
+            document.getElementById("checkoutTitle").innerText = method + " Checkout";
+            document.getElementById("checkoutAmount").innerText = selectedProduct.price;
+            document.getElementById("checkoutScreen").style.display = "block";
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "none";
+        }
+
+        function goToPinScreen() {
+            document.getElementById("checkoutScreen").style.display = "none";
+            document.getElementById("pinTitle").innerText = "Enter " + currentMethod + " PIN";
+            document.getElementById("pinScreen").style.display = "block";
+        }
+
+        function completePayment() {
+            let pin = document.getElementById("upiPin").value;
+            if (pin.length < 4) {
+                alert("Please enter valid PIN");
+                return;
+            }
+            document.getElementById("pinScreen").style.display = "none";
+            document.getElementById("successScreen").style.display = "block";
+            document.getElementById("upiPin").value = "";
+        }
+
+        function backToProducts() {
+            // document.getElementById("paymentSection").classList.add("hidden");
+            // document.getElementById("productSection").classList.remove("hidden");
+            // document.getElementById("codForm").classList.add("hidden");
+            // document.getElementById("onlinePayment").classList.add("hidden");
+            // document.getElementById("checkoutScreen").style.display = "none";
+            // document.getElementById("pinScreen").style.display = "none";
+            // document.getElementById("successScreen").style.display = "none";
+                  window.location.href = "index.html";
+
+        }
+
+
+</script>
+
+
+
+
+
+  <script>
+
+    function showPhotos() {
+      document.getElementById("photos-section").style.display = "block";
+      document.getElementById("see-more").style.display = "none";
+    }
+
+    function hidePhotos() {
+      document.getElementById("photos-section").style.display = "none";
+      document.getElementById("see-more").style.display = "inline-block";
+    }
+
+
+
+
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cart.length;
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.getAttribute('data-name'),
+          price: button.getAttribute('data-price'),
+          img: button.getAttribute('data-images')
+        };
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartCountElement.textContent = cart.length;
+        //alert(item.name + " added to cart!");
+      });
+    });
+
+
+    function msg(event) {
+      event.preventDefault();
+      alert("form submited Sucessfully!")
+      window.location.reload();
+
+    }
+  </script>
+
+  <script>
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const wishlistCountElement = document.getElementById('wishlist-count');
+    wishlistCountElement.textContent = wishlist.length;
+
+    document.querySelectorAll('.add-to-wish').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.getAttribute('data-name'),
+          price: button.getAttribute('data-price'),
+          img: button.getAttribute('data-image')
+        };
+        wishlist.push(item);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        wishlistCountElement.textContent = wishlist.length;
+      });
+    });
+  </script>
+
+
+  <section class="footer container py-4 mt-5" style="background-color: lightgray; ">
+    <div class="row">
+      <div class="col-md-3">
+        <p style="font-size: 35px;">Shop Non-Stop on <b>Laptop Wolrd</b></p>
+        <p>Trusted by crores of Indians<br>Cash on Delivery | Free Delivery</p>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./images/gfooter.png" width="150px">
+          </div>
+          <div class="col-md-6">
+            <img src="./images/app.png" width="150px">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <ul>
+          <a href="./career.html">
+            <li>Careers</li>
+          </a><br>
+          <a href="./bs.html">
+            <li>Become a supplier</li>
+          </a><br>
+          <a href="./faq.html">
+            <li>FAQ'S</li>
+          </a><br>
+          <a href="#contact">
+            <li>Sitemap</li>
+          </a><br>
+        </ul>
+      </div>
+
+      <div class="col-md-2">
+        <ul>
+          <a href="./privacy.html">
+            <li>Privacy Policy</li>
+          </a> <br>
+
+          <a href="./notice.html">
+            <li>Notices and Returns</li><br>
+          </a>
+        </ul>
+      </div>
+
+      <!-- Reach Out Section -->
+      <div class="col-md-2 text-center">
+        <div style="font-size: 25px;">
+          <b>Reach Out to Us</b>
+        </div>
+        <div class="d-flex justify-content-center gap-2 mt-2">
+          <a href="https://www.facebook.com/p/Laptop-SPACE-100063985306507/" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/fluency/30/facebook-new.png" alt="facebook-new" />
+          </a>
+          <a href="https://www.instagram.com/laptop_space/?hl=en" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/30/youtube-play.png" alt="youtube-play" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/30/linkedin.png" alt="linkedin" />
+          </a>
+          <a href="#" class="to">
+            <img width="30" height="30" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1" />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 pr-3 ">
+        <p style="font-size: 25px;"><b>Contact Us</b></p>
+        <p style="font-size: 15px;">
+          Laptop Space in Satara has <br>
+          Two Listed Location:<br>
+          (1) Upper Ground Floor,Shop<br>
+          No 16,Shahu Stadium, Sadar<br>
+          Bazar Satara, 4150002<br><br>
+          (2) Shahu Stadium, B1-Shop No-1<br>
+          Adarsh Corner Appartment, Opposite<br>
+          Rajtara Hotel,Radhika Road,Satara,<br>
+          4150002
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

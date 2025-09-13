@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" hr
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+      <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/laptop.png" height="50" alt="Logo"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#contactus">Contact Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Brand
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./apple.html">Apple</a></li>
+                <li><a class="dropdown-item" href="./asus.html">Asus</a></li>
+                <li><a class="dropdown-item" href="./dell.html">Dell</a></li>
+                <li><a class="dropdown-item" href="./hp.html">HP</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center flex-wrap">
+            <a href="./addtocart.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="fa-solid fa-cart-shopping navbar-icon text-white"></i>
+              <span id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <a href="wishlist.html" class="nav-link position-relative me-3" style="font-size: 30px;">
+              <i class="bi bi-heart-fill navbar-icon text-white"></i>
+              <span id="wishlist-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="font-size: 40px;">
+                <i class="bi bi-person-fill navbar-icon text-white"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+               <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                            <li><a class="dropdown-item" href="./reg.html">Register</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="d-flex mt-2 mt-lg-0 ms-lg-3">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
+ <script>
+      function logout(){
+        window.location.href="https://www.google.com/"
+      }
+    </script>
+
+     <section class="container py-3 ">
+            <h1 id="title" align="center">More About Laptop Wolrd</h1>
+            <br><br>
+            <div>
+                <video autoplay muted loop playsinline class="aboutvideo">
+                    <source src="./images/homevideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6" id="aboutcontent1">
+                    we believe in making technology
+                    more accessible, affordable,
+                    and sustainable. Whether you're a student looking for a budget-friendly laptop, a professional
+                    upgrading your
+                    gear,
+                    or someone wanting to sell an old device, we're here to make the process smooth and reliable.
+
+                </div>
+                <div class="col-md-6 bg-black">
+                    <video autoplay muted loop playsinline height="400px" width="610px" >
+                        <source src="./images/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <br> <br>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <img src="./images/about2.jpg" style="box-shadow: 0px 0px 30px black; border: 3px solid black;" >
+                </div>
+                <div class="col-md-5" id="aboutcontent2" style="margin-left: 80px;">
+                    Through this platform, we aim to give clear information,
+                    attractive visuals, and a user-friendly layout that represents modern laptop technology in an
+                    engaging way.
+                    Whether you're a student, gamer, or professional, we believe there's a perfect laptop for
+                    everyone—and we’re
+                    here to guide you to it.
+                </div>
+            </div>
+          
+             <br><br>
+            <div class="row">
+                
+                <div class="col-md-6" id="aboutcontent1">
+                    Laptop World is your trusted destination for the latest and most reliable laptops. We bring together
+                    a wide range of devices from leading brands to meet the needs of students, gamers, and professionals
+                    alike. Our goal is to make technology simple, affordable, and accessible by offering genuine
+                    products, unbeatable deals, and dedicated customer support. At Laptop World, we don’t just sell
+                    laptops—we help you find the perfect partner for your digital journey.
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/about1.jpg" style="box-shadow: 0px 0px 30px black; border: 3px solid black;">
+                    
+                </div>
+            </div>
+
+
+
+        </section>
+
+   
+
+
+
+
+    </section>
+
+
+    <section class="footer container py-4 mt-5" style="background-color: lightgray; ">
+      <div class="row">
+        <div class="col-md-3">
+          <p style="font-size: 35px;">Shop Non-Stop on <b>Laptop Wolrd</b></p>
+          <p>Trusted by crores of Indians<br>Cash on Delivery | Free Delivery</p>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="./images/gfooter.png" width="150px">
+            </div>
+            <div class="col-md-6">
+              <img src="./images/app.png" width="150px">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <ul>
+            <a href="./career.html">
+              <li>Careers</li>
+            </a><br>
+            <a href="./bs.html">
+              <li>Become a supplier</li>
+            </a><br>
+            <a href="./faq.html">
+              <li>FAQ'S</li>
+            </a><br>
+            <a href="#contact">
+              <li>Sitemap</li>
+            </a><br>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <ul>
+            <a href="./privacy.html">
+              <li>Privacy Policy</li>
+            </a> <br>
+
+            <a href="./notice.html">
+              <li>Notices and Returns</li><br>
+            </a>
+          </ul>
+        </div>
+
+        <!-- Reach Out Section -->
+        <div class="col-md-2 text-center">
+          <div style="font-size: 25px;">
+            <b>Reach Out to Us</b>
+          </div>
+          <div class="d-flex justify-content-center gap-2 mt-2">
+            <a href="https://www.facebook.com/p/Laptop-SPACE-100063985306507/" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/fluency/30/facebook-new.png" alt="facebook-new" />
+            </a>
+            <a href="https://www.instagram.com/laptop_space/?hl=en" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-new.png" />
+            </a>
+            <a href="#" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/color/30/youtube-play.png" alt="youtube-play" />
+            </a>
+            <a href="#" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/color/30/linkedin.png" alt="linkedin" />
+            </a>
+            <a href="#" class="to">
+              <img width="30" height="30" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 pr-3 ">
+          <p style="font-size: 25px;"><b>Contact Us</b></p>
+          <p style="font-size: 15px;">
+            Laptop Space in Satara has <br>
+            Two Listed Location:<br>
+            (1) Upper Ground Floor,Shop<br>
+            No 16,Shahu Stadium, Sadar<br>
+            Bazar Satara, 4150002<br><br>
+            (2) Shahu Stadium, B1-Shop No-1<br>
+            Adarsh Corner Appartment, Opposite<br>
+            Rajtara Hotel,Radhika Road,Satara,<br>
+            4150002
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartCountElement = document.getElementById('cart-count');
+      cartCountElement.textContent = cart.length;
+
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = {
+            name: button.getAttribute('data-name'),
+            price: button.getAttribute('data-price'),
+            img: button.getAttribute('data-images')
+          };
+          cart.push(item);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          cartCountElement.textContent = cart.length;
+          //alert(item.name + " added to cart!");
+        });
+      });
+
+
+      function msg(event) {
+        event.preventDefault();
+        alert("form submited Sucessfully!")
+        window.location.reload();
+
+      }
+    </script>
+
+ <script>
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const wishlistCountElement = document.getElementById('wishlist-count');
+      wishlistCountElement.textContent = wishlist.length;
+
+      document.querySelectorAll('.add-to-wish').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = {
+            name: button.getAttribute('data-name'),
+            price: button.getAttribute('data-price'),
+            img: button.getAttribute('data-image')
+          };
+          wishlist.push(item);
+          localStorage.setItem("wishlist", JSON.stringify(wishlist));
+          wishlistCountElement.textContent = wishlist.length;
+        });
+      });
+    </script>
+
+
+  
+
+</body>
+</html>

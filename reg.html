@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        body {
+            background-image: url(./images/laptopspace.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form {
+            background-color: rgba(255, 255, 255, 0.468);
+            margin-top: 90px;
+            padding-bottom: 30px;
+           
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 5px solid blue;
+        }
+
+        .but {
+            font-size: 16px;
+            width: 180px; /* wider button */
+            height: 45px; /* taller button */
+            border-radius: 50px; /* oval shape */
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            /* Center the text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .but:hover {
+            transform: scale(1.1);
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        #c {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #p {
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #n {
+            font-size: 18px;
+        }
+
+        #confirmpass {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #password {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Responsive CSS to make it mobile-friendly */
+        @media (max-width: 576px) {
+            .form {
+                width: 90% !important;
+                height: auto !important;
+                margin-top: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="tel"] {
+                width: 100% !important;
+                box-sizing: border-box;
+            }
+
+            .but {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+    <script>
+        function msg(event) {
+            event.preventDefault();
+
+            const pass = document.getElementById("password").value;
+            const cpwd = document.getElementById("confirmpass").value;
+            if (pass != cpwd) {
+                alert("Password do not match, please cheack the password");
+                return false;
+            }
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                alert("Please select your gender.");
+                return;
+            }
+
+            const reg = document.querySelector('input[name="reg"]:checked');
+            if (!reg) {
+                alert("Please accpect the all condition and terms.");
+                return;
+            }
+
+            const audio = document.getElementById('welcomeAudio');
+            audio.play();
+
+            audio.onended = function () {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <center>
+
+        <form onsubmit="msg(event)">
+            <div class="form" style="border: 5px solid black;width:470px;  height:500px; align:center">
+                <marquee style="width: fit-content; height: fit-content;">
+                    <h1><u>Registration</u></h1>
+                </marquee> <br><br>
+
+                <h4 style="text-align:left">
+                    &nbsp;<label class="bi bi-person-fill" id="n">&nbsp; Enter Your Name&emsp;&emsp;&nbsp; :&nbsp;</label>
+                    <input type="text" name="fname" id="c" value="" placeholder="Your Name" required><br><br>
+
+                    &nbsp;<label class="bi bi-person-fill" id="n">&nbsp; Enter Your Username &nbsp;:&nbsp;</label>
+                    <input type="text" name="sname" id="c" value="" placeholder="Your Username" required><br><br>
+
+                    &nbsp;<label class="bi bi-envelope-fill" id="n">&nbsp; Enter Your Email-Id&emsp;:&nbsp;</label>
+                    <input type="email" id="c" name="email" value="" placeholder="Your Emai-Id" required><br><br>
+
+                    &nbsp;<label class="bi bi-telephone-fill" id="n">&nbsp; Enter Your Phone Number :&nbsp;</label>
+                    <input type="tel" name="phone" id="p" value="+91 " placeholder="" pattern="\+91\s\d{10}"
+                        maxlength="14" required><br><br>
+
+                    &nbsp;<label for="password" class="bi bi-lock-fill" id="n">&nbsp; Enter Your Password &nbsp; :&nbsp;
+                    </label>
+                    <input type="password" id="password" style="cursor: pointer;" name="pass" value=""
+                        placeholder="Your Password" required><br><br>
+
+                    &nbsp;<label for="confirmpass" class="bi bi-shield-lock" id="n">&nbsp; Confirm
+                        Password&emsp;&nbsp;&nbsp;&nbsp; :&nbsp; </label>
+                    <input type="password" id="confirmpass" style="cursor: pointer;" name="cpwd" value=""
+                        placeholder="Your Confirm Password" required><br><br>
+
+                    &nbsp; <lable class="bi bi-gender-ambiguous" id="n">&nbsp; Gender :
+                        <!-- &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;: &nbsp;</lable> -->
+                    <input type="radio" name="gender" id="n">Male
+                    <input type="radio" name="gender" id="n">Female
+                    <input type="radio" name="gender" id="n">Other<br><br>
+
+                    <br>
+                    <center style="font-size: 20px;"><input type="radio" name="reg" id="c">&nbsp;I accpect your all <a
+                            href="./t&c.html" style="text-decoration: none;">treams and condition</a></center><br>
+
+                    <center>
+                        <button class="but"><b>Registration</b></button>
+                        <audio id="welcomeAudio">
+                            <source src="./images/laptopspaceaudio.mp3" type="audio/mp3">
+                        </audio>
+                    </center>
+
+                </h4>
+
+        </form>
+
+    </center>
+    </div>
+
+</body>
+
+</html>
